@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="헤이딜러 앱 리뷰 6,000건과 공개 소비자 조사로 본 인증중고차 구매 고객의 불편, CX Operator 지원 포트폴리오">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+<title>허재혁 포트폴리오, 헤이딜러 CX Operator</title>
+<style>
+  @page { size: 297mm 210mm; margin: 0; }
+  /* 색은 헤이딜러 공식 웹서비스 CSS 토큰만 사용 (design.md 2절) */
+  :root {
+    --strong:#000000; --body:#0D0D0E; --weak:#37383D99; --line:#70727C29;
+    --bg:#FFFFFF; --bg2:#F8F8F9; --green:#00C364; --green-a:#00C36414; --green-a2:#00C3640A;
+    --blue:#00AEFF; --orange:#FF971D; --red:#FF4D52; --none:#70727C99;
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--body); }
+  body { font-family:"Pretendard","Malgun Gothic",sans-serif; font-size:13pt; line-height:1.45; word-break:keep-all; }
+  .num { font-variant-numeric:tabular-nums; }
+  .slide { width:297mm; height:210mm; padding:13mm 17mm 12mm; display:flex; flex-direction:column; overflow:hidden; break-after:page; }
+  .slide:last-child { break-after:auto; }
+  .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:5mm; }
+  .pill { display:inline-block; background:var(--bg2); border:1px solid var(--line); border-left:4px solid var(--green); border-radius:999px; padding:4px 16px; font-size:11.5pt; font-weight:700; color:var(--strong); }
+  .pno { font-size:11pt; color:var(--weak); font-weight:700; }
+  h1 { font-size:29pt; line-height:1.25; margin:0 0 2.5mm; color:var(--strong); letter-spacing:-0.8pt; }
+  h1 em { font-style:normal; color:var(--green); }
+  .lead { font-size:14pt; color:var(--weak); margin:0 0 6mm; line-height:1.45; }
+  .grid { display:grid; gap:5mm; flex:1; min-height:0; }
+  .panel { background:var(--bg2); border-radius:16px; padding:6mm 7mm; display:flex; flex-direction:column; min-height:0; }
+  .panel.white { background:var(--bg); border:1px solid var(--line); }
+  .panel h3 { font-size:16pt; margin:0 0 4mm; color:var(--strong); }
+  .src { font-size:10pt; color:var(--weak); margin-top:auto; padding-top:3mm; line-height:1.4; }
+  .band { margin-top:5mm; background:var(--strong); color:#fff; border-radius:14px; padding:5mm 8mm; font-size:15pt; font-weight:700; display:flex; gap:6mm; align-items:center; }
+  .band b { color:var(--green); white-space:nowrap; }
+  .card { background:var(--bg); border:1px solid var(--line); border-radius:16px; padding:5.5mm 6mm; display:flex; flex-direction:column; }
+  .card .n { font-size:11pt; font-weight:800; color:var(--weak); margin-bottom:1.5mm; }
+  .card h4 { font-size:16pt; margin:0 0 2mm; color:var(--strong); line-height:1.3; }
+  .card p { margin:0; font-size:12.5pt; color:var(--body); line-height:1.45; }
+  .big { font-size:46pt; font-weight:800; color:var(--strong); letter-spacing:-1.5pt; line-height:1.05; }
+  .big.g { color:var(--green); }
+  .big.r { color:var(--red); }
+  .big.z { color:var(--none); }
+  .lbl { font-size:13pt; color:var(--body); margin-top:3mm; line-height:1.4; }
+  .bars { display:flex; flex-direction:column; gap:3mm; }
+  .bar { display:grid; grid-template-columns:34mm 1fr 15mm; align-items:center; gap:3mm; font-size:13pt; }
+  .bar .t { height:9mm; background:var(--bg); border-radius:7px; overflow:hidden; border:1px solid var(--line); }
+  .bar .f { height:100%; background:var(--weak); }
+  .bar .f.k { background:var(--strong); }
+  .bar .f.g { background:var(--green); }
+  .bar .f.r { background:var(--red); }
+  .bar .f.o { background:var(--orange); }
+  .bar .v { font-weight:800; text-align:right; }
+  .bar.hl { font-weight:800; color:var(--strong); }
+  .bars.tight { gap:2.2mm; }
+  .bars.tight .bar { font-size:12pt; grid-template-columns:38mm 1fr 12mm; }
+  .bars.tight .bar .t { height:7.5mm; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { text-align:left; vertical-align:top; padding:3mm 3.5mm; border-bottom:1px solid var(--line); font-size:12.5pt; line-height:1.45; }
+  th { font-size:11pt; color:var(--weak); font-weight:700; }
+  td b { color:var(--strong); }
+  .judge td { background:var(--green-a); }
+  .judge td:first-child { border-left:4px solid var(--green); }
+  .chip { display:inline-block; border-radius:999px; padding:1px 10px; font-size:10pt; font-weight:700; line-height:1.6; white-space:nowrap; color:var(--body); }
+  .c-real { background:var(--green-a); border:1px solid var(--green); }
+  .c-pub { background:#00AEFF14; border:1px solid var(--blue); }
+  .c-smp { background:#FF971D14; border:1px solid var(--orange); }
+  .c-asm { background:var(--bg2); border:1px solid var(--none); }
+  .c-red { background:#FF4D5214; border:1px solid var(--red); }
+  .quote { background:var(--bg); border-left:4px solid var(--green); border-radius:0 12px 12px 0; padding:3.5mm 5mm; font-size:13pt; margin-bottom:3mm; }
+  ul.list { margin:0; padding-left:5.5mm; font-size:13pt; }
+  ul.list li { margin:0 0 2.5mm; }
+  ul.list b { color:var(--strong); }
+  @media screen {
+    html { background:#F8F8F9; }
+    body { padding:68px 0 32px; background:#F8F8F9; }
+    .slide { background:#FFFFFF; margin:0 auto 20px; border:1px solid #70727C29; border-radius:14px; }
+    .bar-top { position:fixed; top:0; left:0; right:0; z-index:9; height:52px; background:#FFFFFF; border-bottom:1px solid #70727C29; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 16px; font-size:14px; }
+    .bar-top b { color:#000000; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .bar-top nav { display:flex; gap:8px; flex-shrink:0; }
+    .bar-top a { color:#0D0D0E; text-decoration:none; border:1px solid #70727C29; border-radius:999px; padding:6px 12px; font-weight:600; white-space:nowrap; }
+    .bar-top a.main { border-color:#00C364; background:#00C36414; }
+  }
+  @media print { .bar-top { display:none; } }
+</style>
+</head>
+<body>
+<div class="bar-top"><b>허재혁 | 헤이딜러 CX Operator 포트폴리오</b><nav><a class="main" href="portfolio.pdf">PDF</a><a href="https://github.com/jhheo51-arch/heydealer-cx">분석 코드</a></nav></div>
+
+
+<!-- 1 표지 -->
+<section class="slide">
+  <div class="top"><span class="pill">헤이딜러 CX Operator(인증중고차) 지원 포트폴리오</span><span class="pno">허재혁 | 2026.11</span></div>
+  <h1 style="font-size:44pt;line-height:1.2;margin-top:6mm">광고가 만든 신뢰를<br><em>실제 고객 경험으로</em> 이어가기</h1>
+  <p class="lead" style="font-size:16pt;margin-top:4mm">앱 리뷰 6,000건과 공개 소비자 조사로, 차를 산 고객이 어디서 신뢰를 잃는지 찾고<br>그 자리에서 CX Operator로서 무엇을 확인하고 설명하고 고칠지 정리했습니다.</p>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="panel"><div class="big r num">36%</div><div class="lbl">헤이딜러 중고차 <b>구입</b> 만족도<br>(처분 만족도는 59%로 1위)</div><div class="src"><span class="chip c-pub">공개 조사</span></div></div>
+    <div class="panel"><div class="big num">6,000</div><div class="lbl">직접 모은 Google Play 리뷰<br>2024.03 ~ 2026.11</div><div class="src"><span class="chip c-smp">탐색 표본</span></div></div>
+    <div class="panel"><div class="big num">21</div><div class="lbl">1~3점 452건 중<br>차를 산 고객의 글</div><div class="src"><span class="chip c-smp">탐색 표본</span></div></div>
+    <div class="panel"><div class="big g num">3 / 4</div><div class="lbl">인수 뒤 보증, 수리 불만 중<br>연락이 끊겼다는 글</div><div class="src"><span class="chip c-smp">탐색 표본</span></div></div>
+  </div>
+  <div class="band"><b>관점</b><span>고객이 브랜드를 진짜로 판단하는 순간은 차를 받은 뒤 문제가 생겼을 때입니다</span></div>
+</section>
+
+<!-- 2 문제 -->
+<section class="slide">
+  <div class="top"><span class="pill">01 헤이딜러와 고객의 문제</span><span class="pno">2</span></div>
+  <h1>팔 때 만족 <em>1위</em>, 살 때 만족 <em style="color:var(--red)">4위</em></h1>
+  <p class="lead">내 차 팔기에서 쌓은 신뢰가 인증중고차 구매로 그대로 넘어오지 않습니다.</p>
+  <div class="grid" style="grid-template-columns:1fr 1fr 0.9fr">
+    <div class="panel">
+      <h3>중고차 구입 만족도</h3>
+      <div class="bars">
+        <div class="bar"><span>K카</span><div class="t"><div class="f" style="width:63%"></div></div><span class="v num">63%</span></div>
+        <div class="bar"><span>엔카</span><div class="t"><div class="f" style="width:47%"></div></div><span class="v num">47%</span></div>
+        <div class="bar"><span>KB차차차</span><div class="t"><div class="f" style="width:42%"></div></div><span class="v num">42%</span></div>
+        <div class="bar hl"><span>헤이딜러</span><div class="t"><div class="f r" style="width:36%"></div></div><span class="v num">36%</span></div>
+      </div>
+      <p style="margin:4mm 0 0;font-size:12.5pt">헤이딜러는 전년보다 <b>15%p 하락</b></p>
+      <div class="src">컨슈머인사이트 제25차 연례 자동차기획조사, 2025년 7월, 전체 표본 10만 명. 플랫폼별 응답자 수와 척도는 보도자료에 없어 원 보고서로 확인할 부분 <span class="chip c-pub">공개 조사</span></div>
+    </div>
+    <div class="panel">
+      <h3>중고차 처분 만족도</h3>
+      <div class="bars">
+        <div class="bar hl"><span>헤이딜러</span><div class="t"><div class="f g" style="width:59%"></div></div><span class="v num">59%</span></div>
+        <div class="bar"><span>K카</span><div class="t"><div class="f" style="width:50%"></div></div><span class="v num">50%</span></div>
+        <div class="bar"><span>엔카</span><div class="t"><div class="f" style="width:37%"></div></div><span class="v num">37%</span></div>
+        <div class="bar"><span>KB차차차</span><div class="t"><div class="f" style="width:32%"></div></div><span class="v num">32%</span></div>
+      </div>
+      <p style="margin:4mm 0 0;font-size:12.5pt">헤이딜러는 전년보다 <b>5%p 상승</b></p>
+      <div class="src">같은 조사, consumerinsight.co.kr 보도자료 2026.02.25 <span class="chip c-pub">공개 조사</span></div>
+    </div>
+    <div class="panel white">
+      <h3>제가 읽은 차이</h3>
+      <ul class="list">
+        <li><b>파는 고객</b>은 빠른 견적을 경험합니다. 불만은 주로 감가입니다.</li>
+        <li><b>사는 고객</b>은 차를 받은 뒤에야 상태를 압니다.</li>
+        <li>이상이 생기면 보증, 수리, 연락이 한꺼번에 문제가 됩니다.</li>
+      </ul>
+      <div class="src">제 해석입니다. 내부 데이터로 다시 확인할 가설</div>
+    </div>
+  </div>
+  <div class="band"><b>질문</b><span>사는 고객의 인수 뒤 경험을, 팔 때만큼 매끄럽게 만들 수 있을까</span></div>
+</section>
+
+<!-- 3 약속 -->
+<section class="slide">
+  <div class="top"><span class="pill">02 광고와 서비스 약속</span><span class="pno">3</span></div>
+  <h1>광고의 약속은 <em>차를 받은 뒤에</em> 시험받습니다</h1>
+  <p class="lead">광고는 점검하고 고친 차를 필요한 가족에게 건네는 이야기입니다. 고객은 헤이딜러 차도 그렇다고 기대합니다.</p>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="card"><div class="n">약속 1</div><h4>모든 차량 무사고</h4><p style="color:var(--weak)">고객의 기대</p><p>점검표와 실제 차가 같다</p><p style="color:var(--weak);margin-top:4mm">시험받는 순간</p><p>다른 정비소에서 교환 흔적이 나올 때 <b>[1271]</b></p><div class="src"><span class="chip c-pub">공식 안내</span> <span class="chip c-smp">리뷰</span></div></div>
+    <div class="card"><div class="n">약속 2</div><h4>1년 무료 보증</h4><p style="color:var(--weak)">고객의 기대</p><p>1년 안의 고장은 고쳐 준다</p><p style="color:var(--weak);margin-top:4mm">시험받는 순간</p><p>쇼바 결함이 소모품이라 거절될 때 <b>[578]</b></p><div class="src"><span class="chip c-pub">공식 안내</span> <span class="chip c-smp">리뷰</span></div></div>
+    <div class="card"><div class="n">약속 3</div><h4>단순변심 무료 환불</h4><p style="color:var(--weak)">고객의 기대</p><p>마음에 안 들면 돌려보낸다</p><p style="color:var(--weak);margin-top:4mm">시험받는 순간</p><p>환불 기간이 지나 이상을 발견했을 때 <b>[360]</b></p><div class="src"><span class="chip c-pub">공식 안내</span> <span class="chip c-smp">리뷰</span></div></div>
+    <div class="card"><div class="n">약속 4</div><h4>99.9% 살균세차</h4><p style="color:var(--weak)">고객의 기대</p><p>받는 순간 깨끗하다</p><p style="color:var(--weak);margin-top:4mm">시험받는 순간</p><p>인수 당일. 이번 표본에서 세차 불만은 찾지 못했습니다</p><div class="src"><span class="chip c-pub">공식 안내</span></div></div>
+  </div>
+  <div class="src" style="margin-top:3mm">출처: heydealer.com/market/cars, 광고 youtu.be/NuFF06HlvzM. 보증 제외 항목과 환불 기간은 약관 원문으로 확인할 부분입니다. [ ] 안은 수집 파일의 리뷰 번호</div>
+  <div class="band"><b>판단</b><span>약속이 깨졌다고 느끼는 곳은 대부분 기준이 미리 설명되지 않은 곳입니다</span></div>
+</section>
+
+<!-- 4 여정 -->
+<section class="slide">
+  <div class="top"><span class="pill">03 고객 여정과 불편 지점</span><span class="pno">4</span></div>
+  <h1>구매 고객의 불만은 <em>인수 뒤에 가장 무겁습니다</em></h1>
+  <p class="lead">차를 산 고객의 1~3점 리뷰 21건을 여정 8단계에 놓았습니다. 숫자는 건수이며 비율이 아닙니다.</p>
+  <div class="grid" style="grid-template-columns:repeat(8,1fr);gap:3mm;flex:0 0 auto">
+    <div class="card" style="padding:4mm"><div class="n">1</div><h4 style="font-size:13pt">차량 탐색</h4><div class="big num" style="font-size:36pt">11</div></div>
+    <div class="card" style="padding:4mm"><div class="n">2</div><h4 style="font-size:13pt">정보 확인</h4><div class="big num" style="font-size:36pt">3</div></div>
+    <div class="card" style="padding:4mm"><div class="n">3</div><h4 style="font-size:13pt">구매 결정</h4><div class="big num" style="font-size:36pt">3</div></div>
+    <div class="card" style="padding:4mm"><div class="n">4</div><h4 style="font-size:13pt">인수</h4><div class="big z num" style="font-size:36pt">0</div></div>
+    <div class="card" style="padding:4mm;border:2px solid var(--red)"><div class="n">5</div><h4 style="font-size:13pt">이상 발견</h4><div class="big r num" style="font-size:36pt">2</div></div>
+    <div class="card" style="padding:4mm;border:2px solid var(--red)"><div class="n">6</div><h4 style="font-size:13pt">보증 문의</h4><div class="big r num" style="font-size:36pt">1</div></div>
+    <div class="card" style="padding:4mm;border:2px solid var(--red)"><div class="n">7</div><h4 style="font-size:13pt">정비와 보상</h4><div class="big r num" style="font-size:36pt">1</div></div>
+    <div class="card" style="padding:4mm"><div class="n">8</div><h4 style="font-size:13pt">사후 만족</h4><div class="big z num" style="font-size:36pt">0</div></div>
+  </div>
+  <div class="grid" style="grid-template-columns:1.5fr 1fr;margin-top:5mm">
+    <div class="panel white" style="padding:4mm 6mm">
+      <table>
+        <tr><th style="width:15%">리뷰</th><th>인수 뒤에 생긴 일 (요약)</th><th style="width:27%">연락</th></tr>
+        <tr><td class="num"><b>[297]</b></td><td>구매 이틀 뒤 브레이크 이상, 수리 일부만 승인</td><td><span class="chip c-red">몇 주 연락 없음</span></td></tr>
+        <tr><td class="num"><b>[360]</b></td><td>검수에서 도어 버튼 고장이 빠짐</td><td>답변 받음</td></tr>
+        <tr><td class="num"><b>[578]</b></td><td>쇼바 결함이 소모품이라 보증 거절</td><td><span class="chip c-red">상담 요청 끊김</span></td></tr>
+        <tr><td class="num"><b>[1271]</b></td><td>점검과 달리 휠하우스 교환 차</td><td><span class="chip c-red">전화 불통</span></td></tr>
+      </table>
+    </div>
+    <div class="panel">
+      <h3>같은 제도, 다른 경험</h3>
+      <div class="quote">[1227] 5점: 1년 케어로 수리비를 바로 받았다</div>
+      <p style="margin:0;font-size:12.5pt">제도보다 <b>처리 과정</b>이 경험을 가른다는 가설을 세웠습니다.</p>
+    </div>
+  </div>
+  <div class="src">Google Play 헤이딜러 리뷰 직접 수집. 리뷰 내용은 작성자 주장이며 사실 여부는 확인하지 않았습니다 <span class="chip c-smp">탐색 표본</span></div>
+</section>
+
+<!-- 5 방법 -->
+<section class="slide">
+  <div class="top"><span class="pill">04 데이터 방법과 한계</span><span class="pno">5</span></div>
+  <h1>6,000건 중 <em>구매 고객의 글은 21건</em>뿐이었습니다</h1>
+  <p class="lead">숫자가 작은 만큼, 사실과 제 해석을 먼저 나눠 둡니다.</p>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);flex:0 0 auto">
+    <div class="card"><div class="n">1 수집</div><div class="big num" style="font-size:38pt">6,000</div><p style="margin-top:2mm">Google Play 최신순<br>작성자 이름은 저장 안 함</p></div>
+    <div class="card"><div class="n">2 거르기</div><div class="big num" style="font-size:38pt">452</div><p style="margin-top:2mm">1~3점만 남김<br>5점이 88%</p></div>
+    <div class="card"><div class="n">3 분류</div><div class="big num" style="font-size:38pt">8개</div><p style="margin-top:2mm">키워드 규칙으로 주제<br>구매 글 21건은 직접 읽음</p></div>
+    <div class="card"><div class="n">4 검증</div><div class="big g num" style="font-size:38pt">33/40</div><p style="margin-top:2mm">무작위 40건을<br>직접 읽어 확인</p></div>
+  </div>
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:5mm">
+    <div class="panel">
+      <h3>숫자 구분</h3>
+      <table>
+        <tr><td style="width:30%"><span class="chip c-real">실제 경험</span></td><td>군 수당 400만 원, ARVIS 서류 감소</td></tr>
+        <tr><td><span class="chip c-pub">공개 조사</span></td><td>컨슈머인사이트, 헤이딜러 공식 약속</td></tr>
+        <tr><td><span class="chip c-smp">탐색 표본</span></td><td>앱 리뷰와 분류 결과</td></tr>
+        <tr><td><span class="chip c-asm">가정</span></td><td>개선 과제의 지표, 입사 후 계획</td></tr>
+      </table>
+    </div>
+    <div class="panel white">
+      <h3>한계</h3>
+      <ul class="list">
+        <li>리뷰는 불만이 큰 사람이 더 씁니다. 비율로 읽지 않습니다.</li>
+        <li>리뷰는 작성자 주장이며, 판정이 맞았는지는 모릅니다.</li>
+        <li>21건은 혼자 분류했습니다. 입사 후 상담 기록으로 다시 맞춰 보겠습니다.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="src">코드: heydealer-apply/reviews/collect.py, classify.py | 기간 2024.03.21 ~ 2026.11.02</div>
+</section>
+
+<!-- 6 대시보드 -->
+<section class="slide">
+  <div class="top"><span class="pill">05 VOC 대시보드</span><span class="pno">6</span></div>
+  <h1>구매 고객의 불만은 <em>정보와 연락</em>에 모입니다</h1>
+  <p class="lead" style="font-size:12pt;margin-bottom:5mm">공개 소비자 조사와 공개 사례를 활용한 탐색용 분석입니다. 실제 헤이딜러 내부 상담 데이터가 아니며, 전체 고객의 비율이나 회사의 실제 발생률로 해석하지 않습니다.</p>
+  <div class="grid" style="grid-template-columns:1.1fr 1fr 0.62fr">
+    <div class="panel">
+      <h3>1~3점 리뷰 주제 (452건)</h3>
+      <div class="bars tight">
+        <div class="bar"><span>판매 가격과 감가</span><div class="t"><div class="f" style="width:100%"></div></div><span class="v num">162</span></div>
+        <div class="bar"><span>앱 오류와 속도</span><div class="t"><div class="f" style="width:58.6%"></div></div><span class="v num">95</span></div>
+        <div class="bar"><span>기타, 내용 불명</span><div class="t"><div class="f" style="width:55.6%"></div></div><span class="v num">90</span></div>
+        <div class="bar"><span>광고와 이벤트</span><div class="t"><div class="f" style="width:26.5%"></div></div><span class="v num">43</span></div>
+        <div class="bar"><span>고객센터 연결</span><div class="t"><div class="f o" style="width:15.4%"></div></div><span class="v num">25</span></div>
+        <div class="bar hl"><span>차량 구매와 사후</span><div class="t"><div class="f k" style="width:13%"></div></div><span class="v num">21</span></div>
+        <div class="bar"><span>이력조회</span><div class="t"><div class="f" style="width:8%"></div></div><span class="v num">13</span></div>
+        <div class="bar"><span>명의이전과 탁송</span><div class="t"><div class="f" style="width:1.9%"></div></div><span class="v num">3</span></div>
+      </div>
+      <div class="src">규칙 분류, 40건 확인 33건 일치 <span class="chip c-smp">탐색 표본</span></div>
+    </div>
+    <div class="panel">
+      <h3>구매 고객 글 21건의 유형</h3>
+      <div class="bars tight">
+        <div class="bar"><span>정보 설명 부족</span><div class="t"><div class="f k" style="width:100%"></div></div><span class="v num">7</span></div>
+        <div class="bar"><span>가격과 매물</span><div class="t"><div class="f" style="width:85.7%"></div></div><span class="v num">6</span></div>
+        <div class="bar hl"><span>인수 뒤 문제</span><div class="t"><div class="f r" style="width:57.1%"></div></div><span class="v num">4</span></div>
+        <div class="bar"><span>처리 지연</span><div class="t"><div class="f" style="width:28.6%"></div></div><span class="v num">2</span></div>
+        <div class="bar"><span>환불과 계약</span><div class="t"><div class="f" style="width:14.3%"></div></div><span class="v num">1</span></div>
+        <div class="bar"><span>상담 태도</span><div class="t"><div class="f" style="width:14.3%"></div></div><span class="v num">1</span></div>
+      </div>
+      <div class="src">인수 뒤 문제 4건은 정비, 성능점검, 보증 범위, 차량 상태 각 1건. 한 사람이 직접 분류</div>
+    </div>
+    <div class="panel white">
+      <h3>답글 비율</h3>
+      <div class="big g num" style="font-size:40pt">437</div>
+      <p style="margin:1mm 0 0;font-size:13pt;color:var(--weak)">/ 452건 (96.7%)</p>
+      <p style="margin:4mm 0 0;font-size:12.5pt">답글은 달립니다. 그 뒤 문제가 끝났는지는 리뷰로 알 수 없습니다.</p>
+      <div class="src">replyContent 기준</div>
+    </div>
+  </div>
+  <div class="band"><b>읽는 법</b><span>판매 쪽 불만은 많고, 구매 쪽은 적지만 한 건이 무겁습니다</span></div>
+</section>
+
+<!-- 7 케이스 -->
+<section class="slide">
+  <div class="top"><span class="pill">06 케이스 스터디</span><span class="pno">7</span></div>
+  <h1>결론보다 <em>기준을 먼저</em> 보여 주겠습니다</h1>
+  <p class="lead">공개 리뷰 두 건에 제가 담당자였다면 어떻게 했을지 적었습니다. 판정은 정비 담당자와 보증 기준이 합니다.</p>
+  <div class="grid" style="grid-template-columns:1fr 1fr">
+    <div class="panel white" style="padding:5mm 6mm">
+      <h3>A. 쇼바 결함, 소모품이라 거절 [578]</h3>
+      <table>
+        <tr><td style="width:23%"><b>문제</b></td><td>결론만 전달되고 상담 요청은 끊김</td></tr>
+        <tr class="judge"><td><b>내 판단</b></td><td>근거 없이 거절만 들으면 고객은 약속 위반으로 받아들임</td></tr>
+        <tr><td><b>내 대응</b></td><td>약관 조항, 정비 소견, 다음 연락 시각을 한 번에 안내</td></tr>
+        <tr><td><b>다음 개선</b></td><td>보증 제외 항목을 구매 전에 안내</td></tr>
+        <tr><td><b>검증</b></td><td><span class="chip c-smp">리뷰 1건</span> 약관의 소모품 목록은 입사 후 확인</td></tr>
+      </table>
+    </div>
+    <div class="panel white" style="padding:5mm 6mm">
+      <h3>B. 브레이크 수리 지연 [297]</h3>
+      <table>
+        <tr><td style="width:23%"><b>문제</b></td><td>수리 일부만 승인, 부품 대기, 몇 주 연락 없음</td></tr>
+        <tr class="judge"><td><b>내 판단</b></td><td>고객은 지연보다 무엇을 기다리는지 모르는 상태가 더 힘듦</td></tr>
+        <tr><td><b>내 대응</b></td><td>승인된 항목과 이유를 표로 전달, 매주 먼저 연락</td></tr>
+        <tr><td><b>다음 개선</b></td><td>7일 이상 연락 없는 건은 자동 알림</td></tr>
+        <tr><td><b>검증</b></td><td><span class="chip c-smp">리뷰 1건</span> 승인 범위의 이유는 리뷰로 알 수 없음</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="band"><b>원칙</b><span>판정은 기준과 전문가가, 설명과 다음 연락 약속은 CX Operator가</span></div>
+</section>
+
+<!-- 8 설명 흐름 -->
+<section class="slide">
+  <div class="top"><span class="pill">07 보증, 수리, 보상 설명 흐름</span><span class="pno">8</span></div>
+  <h1>확인하고, <em>쉽게 설명하고</em>, 제때 연결합니다</h1>
+  <p class="lead">정비사가 아니어도 점검 결과와 보증 기준을 확인해 고객 말로 설명하고, 필요하면 전문가에게 연결할 수 있습니다.</p>
+  <div class="grid" style="grid-template-columns:repeat(6,1fr);gap:3mm;flex:0 0 auto">
+    <div class="card" style="padding:4.5mm"><div class="n">1</div><h4>접수</h4><p>증상, 시점, 사진</p></div>
+    <div class="card" style="padding:4.5mm"><div class="n">2</div><h4>기록 확인</h4><p>점검표, 보증 기간</p></div>
+    <div class="card" style="padding:4.5mm"><div class="n">3</div><h4>기준 대조</h4><p>대상과 제외 항목</p></div>
+    <div class="card" style="padding:4.5mm"><div class="n">4</div><h4>전문가 연결</h4><p>질문을 정리해 전달</p></div>
+    <div class="card" style="padding:4.5mm;background:var(--green-a);border-color:var(--green)"><div class="n">5</div><h4>고객 설명</h4><p>결론, 근거, 다음 연락</p></div>
+    <div class="card" style="padding:4.5mm"><div class="n">6</div><h4>종결 확인</h4><p>해결 여부, 반복이면 VOC</p></div>
+  </div>
+  <div class="grid" style="grid-template-columns:1.15fr 1fr;margin-top:5mm">
+    <div class="panel">
+      <h3>설명 예시 (케이스 A)</h3>
+      <div class="quote">증상은 쇼크업소버 쪽으로 보입니다. 보증 대상인지 확인하려고 정비 담당자에게 사진을 보내 두었습니다.</div>
+      <div class="quote">내일 오후 3시까지 결과와 근거 조항을 알려 드리겠습니다. 대상이 아니어도 가까운 정비소 견적을 함께 드릴게요.</div>
+      <div class="src">예시 문장 <span class="chip c-asm">가정</span> 제외 항목과 제휴 정비 여부는 입사 후 확인</div>
+    </div>
+    <div class="panel white">
+      <h3>같은 원칙의 개인 프로젝트, claim-relay</h3>
+      <ul class="list">
+        <li><b>AI는 읽기만</b>, 판정은 규칙표가 합니다</li>
+        <li>사람이 볼 건을 자동 처리로 넘긴 경우 <b>0건</b></li>
+        <li>검토 경로 일치 <b>18/20</b> (단어 규칙만 쓰면 6/20)</li>
+        <li>고객 답장에 불만 신호가 있으면 건을 다시 엽니다</li>
+      </ul>
+      <div class="src">github.com/jhheo51-arch/claim-relay, 가상 진술 기준</div>
+    </div>
+  </div>
+  <div class="band"><b>핵심</b><span>모르는 것은 아는 척하지 않고, 누가 언제 답할지를 먼저 알립니다</span></div>
+</section>
+
+<!-- 9 개선 과제 -->
+<section class="slide">
+  <div class="top"><span class="pill">08 우선 개선 과제와 협업</span><span class="pno">9</span></div>
+  <h1>건수보다 <em>고객 손해의 크기</em>로 순서를 정했습니다</h1>
+  <p class="lead">리뷰 표본에서 나온 가설입니다. 입사 후 실제 상담 기록으로 순서를 다시 확인합니다.</p>
+  <div class="panel white" style="flex:1;padding:4mm 6mm;justify-content:space-between">
+    <table>
+      <tr><th style="width:5%">순서</th><th style="width:31%">과제</th><th style="width:25%">근거 리뷰</th><th style="width:15%">함께할 팀</th><th>첫 지표</th></tr>
+      <tr><td style="padding:5mm 3.5mm"><div class="big g num" style="font-size:24pt">1</div></td><td style="padding:5mm 3.5mm"><b>수리 진행 중 건의 연락 약속</b><br><span style="color:var(--weak)">담당자 고정, 다음 연락 시각 안내</span></td><td style="padding:5mm 3.5mm">[297] [578] [1271]<br>4건 중 3건 연락 끊김</td><td style="padding:5mm 3.5mm">CX 운영</td><td style="padding:5mm 3.5mm">약속 시각 안에 먼저 연락한 비율</td></tr>
+      <tr><td style="padding:5mm 3.5mm"><div class="big num" style="font-size:24pt">2</div></td><td style="padding:5mm 3.5mm"><b>보증 제외 항목의 구매 전 안내</b><br><span style="color:var(--weak)">소모품 범위, 지역별 보증수리</span></td><td style="padding:5mm 3.5mm">[578] [1255]</td><td style="padding:5mm 3.5mm">상품화, 정비</td><td style="padding:5mm 3.5mm">거절로 끝난 보증 문의의 재문의율</td></tr>
+      <tr><td style="padding:5mm 3.5mm"><div class="big num" style="font-size:24pt">3</div></td><td style="padding:5mm 3.5mm"><b>점검 범위를 고객 말로 공개</b><br><span style="color:var(--weak)">하부 점검 여부, 작동 확인 항목</span></td><td style="padding:5mm 3.5mm">[360] [1271]</td><td style="padding:5mm 3.5mm">정비, 마케팅</td><td style="padding:5mm 3.5mm">인수 30일 안의 상태 이의 건수</td></tr>
+      <tr><td style="padding:5mm 3.5mm"><div class="big num" style="font-size:24pt">4</div></td><td style="padding:5mm 3.5mm"><b>매물 상세 정보 보강</b><br><span style="color:var(--weak)">엔진룸 사진, 옵션 필터</span></td><td style="padding:5mm 3.5mm">[780] [430] [1329] [2015]<br>탐색 단계 11건</td><td style="padding:5mm 3.5mm">제품, 영업</td><td style="padding:5mm 3.5mm">상세 페이지에서 시작된 문의 건수</td></tr>
+    </table>
+    <div class="src">지표와 순서는 <span class="chip c-asm">가정</span> 근거는 <span class="chip c-smp">탐색 표본</span></div>
+  </div>
+  <div class="band"><b>협업</b><span>정비팀에는 정리된 질문을, 제품과 영업팀에는 건수를 붙인 주간 VOC를 보냅니다</span></div>
+</section>
+
+<!-- 10 기여 -->
+<section class="slide">
+  <div class="top"><span class="pill">09 기여 방안</span><span class="pno">10</span></div>
+  <h1>같은 일이 <em>다시 생기지 않게</em> 만드는 사람입니다</h1>
+  <p class="lead">제가 실제로 해 본 일과, 그 방식으로 헤이딜러에서 할 일입니다.</p>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);flex:0 0 auto">
+    <div class="card"><div class="n">실제 경험</div><div class="big g num" style="font-size:30pt">400만 원</div><h4 style="margin-top:2mm">못 받은 수당 찾기</h4><p>기록 대조로 9명분 발견, 2주 만에 지급</p></div>
+    <div class="card"><div class="n">실제 경험</div><div class="big g num" style="font-size:30pt">월 10건</div><h4 style="margin-top:2mm">반대한 간부 6명 설득</h4><p>ARVIS 도입, 반복 서류 월 40건에서 약 10건</p></div>
+    <div class="card"><div class="n">개인 프로젝트</div><div class="big g num" style="font-size:30pt">0건</div><h4 style="margin-top:2mm">claim-relay</h4><p>사람이 볼 청구를 자동 처리로 넘긴 건</p></div>
+    <div class="card"><div class="n">개인 프로젝트</div><div class="big g num" style="font-size:30pt">F1 0.69</div><h4 style="margin-top:2mm">VoC Lens</h4><p>리뷰 불만 분류 0.46에서 개선</p></div>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:5mm">
+    <div class="panel"><h3>1개월</h3><p style="margin:0;font-size:13pt">보증 기준, 점검표, 정비 용어를 익히고 지난 상담 기록으로 유형 기준을 맞춥니다</p></div>
+    <div class="panel"><h3>2개월</h3><p style="margin:0;font-size:13pt">맡은 건의 유형과 연락 공백을 기록해 주간 VOC로 정리합니다</p></div>
+    <div class="panel"><h3>3개월</h3><p style="margin:0;font-size:13pt">손해가 큰 반복 이슈 하나의 기준 개선안을 상품화, 정비팀과 만듭니다</p></div>
+  </div>
+  <div class="band" style="font-size:12pt;font-weight:600"><b>링크</b><span>github.com/jhheo51-arch | jhheo51-arch.github.io/claim-relay/web | voc-lens.streamlit.app | tedd51@naver.com</span></div>
+</section>
+
+<script>
+function fit(){var base=1123;var z=Math.min(1,(document.documentElement.clientWidth-24)/base);document.querySelectorAll('.slide').forEach(function(e){e.style.zoom=z;});}
+window.addEventListener('resize',fit);document.fonts&&document.fonts.ready.then(fit);fit();
+</script>
+</body>
+</html>
