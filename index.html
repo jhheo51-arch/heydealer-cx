@@ -75,6 +75,8 @@
   .hb.hl { font-weight:800; color:var(--strong); }
   /* 번호 사각 */
   .sq { width:20mm; height:20mm; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:30pt; font-weight:800; flex-shrink:0; }
+  .scr { display:none; }
+  @media screen { .scr { display:block; width:100%; margin-top:3mm; font:inherit; font-size:13pt; padding:2.5mm 3mm; border-radius:10px; border:0; } }
   .down { width:0; height:0; border-left:7mm solid transparent; border-right:7mm solid transparent; border-top:5mm solid var(--line); margin:0 auto; }
   @media screen {
     html { background:#F7F8FB; }
@@ -101,8 +103,8 @@
       <h1 style="font-size:46pt;line-height:1.16;margin:2mm 0 0">광고가 만든 신뢰를<br><em>차를 받은 뒤의 경험</em>까지</h1>
       <p style="font-size:16pt;color:var(--weak);margin:0;line-height:1.5">앱 리뷰 6,000건과 공개 소비자 조사로<br>차를 사는 고객이 어디서 신뢰를 잃는지 찾고,<br>CX Operator로서 확인하고 설명하고 고칠 일을 정리했습니다.</p>
       <div class="blk gray" style="flex-direction:row;gap:5mm;align-items:center;padding:5mm 6mm">
-        <div class="sq green" style="width:16mm;height:16mm;font-size:20pt">10</div>
-        <div style="font-size:13.5pt;line-height:1.45">문제, 약속, 고객 여정, 방법, VOC, 케이스,<br>설명 흐름, 개선 과제, 기여 방안</div>
+        <div class="sq green" style="width:16mm;height:16mm;font-size:20pt">11</div>
+        <div style="font-size:13.5pt;line-height:1.45">문제, 약속, 고객 여정, 경쟁사 비교, VOC, 케이스, 설명 흐름, 개선 과제, AI 상담, 환불 마감 안내, 기여 방안</div>
       </div>
     </div>
     <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:5mm">
@@ -406,9 +408,70 @@
   <div class="band"><b>원칙</b><span>보증 판정, 환불 승인, 보상 금액은 AI가 정하지 않습니다</span></div>
 </section>
 
-<!-- 11 기여 -->
+<!-- 11 환불 마감 안내 -->
+<section class="slide" id="deadline">
+  <div class="top"><span class="pill">10 환불 마감 안내</span><span class="pno">11</span></div>
+  <h1>차를 받은 날, 환불 마감을 <em>날짜와 시각으로</em> 알려 드립니다</h1>
+  <div class="row fill">
+    <div class="blk black" style="flex:0.82;justify-content:space-between">
+      <div>
+        <div class="k">환불 마감 계산기</div>
+        <div style="font-size:14pt;font-weight:700">차량 인수 <span id="dl-in" class="num">11월 13일(금) 오후 2시</span></div>
+        <input id="dl-input" class="scr" type="datetime-local" value="2026-11-13T14:00" aria-label="차량 인수 일시">
+      </div>
+      <div>
+        <div style="font-size:13pt;font-weight:700;color:#FFFFFFB3">단순 변심 환불 접수 마감</div>
+        <div class="mid t-g num" id="dl-out" style="font-size:36pt;margin-top:1.5mm">11월 15일(일)<br>오후 6시</div>
+        <div style="font-size:14pt;font-weight:700;margin-top:2.5mm">인수부터 <span id="dl-left" class="num">52시간</span></div>
+      </div>
+      <div class="blk" id="dl-warn" style="background:#FF4D5233;border-radius:12px;padding:3mm 4mm;font-size:12.5pt;line-height:1.4">마감일이 주말입니다. 이날 접수 창구가 열려 있는지 입사 후 확인할 지점입니다.</div>
+    </div>
+    <div class="col" style="flex:1.55;gap:3mm">
+      <div class="blk greena fill" style="flex-direction:row;gap:5mm;align-items:center;padding:4mm 6mm;border:2px solid var(--primary)">
+        <div style="width:42mm;flex-shrink:0"><div class="k">문자 1, 인수 당일</div><div style="font-size:16pt;font-weight:800" id="dl-t1">11월 13일(금)</div></div>
+        <div style="font-size:13pt;line-height:1.45">차량 인수를 마치셨습니다. 단순 변심 환불은 <b id="dl-m1">11월 15일(일) 오후 6시</b>까지 접수할 수 있고, 1년 무료 보증에서 빠지는 항목은 앱에서 확인할 수 있습니다. 내일 오전에 불편한 점이 없는지 다시 연락드리겠습니다.</div>
+      </div>
+      <div class="blk gray fill" style="flex-direction:row;gap:5mm;align-items:center;padding:4mm 6mm">
+        <div style="width:42mm;flex-shrink:0"><div class="k">문자 2, 다음 날 오전</div><div style="font-size:16pt;font-weight:800" id="dl-t2">11월 14일(토)</div></div>
+        <div style="font-size:13pt;line-height:1.45">하루 타 보시니 어떠신가요? 경고등이나 처음 듣는 소리가 있으면 사진이나 영상과 함께 채팅으로 보내 주세요. 정비 담당자가 확인한 뒤 결과와 다음 연락 시각을 함께 알려 드립니다.</div>
+      </div>
+      <div class="blk gray fill" style="flex-direction:row;gap:5mm;align-items:center;padding:4mm 6mm">
+        <div style="width:42mm;flex-shrink:0"><div class="k">문자 3, 마감 당일 오전</div><div style="font-size:16pt;font-weight:800" id="dl-t3">11월 15일(일)</div></div>
+        <div style="font-size:13pt;line-height:1.45">단순 변심 환불 접수가 <b id="dl-m3">오늘 오후 6시</b>에 끝납니다. 고민 중이시면 그 전에 채팅으로 남겨 주세요. 계속 타시면 따로 하실 일은 없고, 1년 무료 보증은 그대로 적용됩니다.</div>
+      </div>
+      <div style="font-size:12.5pt;font-weight:700;color:var(--weak);padding-left:2mm">모든 문자에 결론, 근거, 다음 연락을 넣습니다</div>
+    </div>
+  </div>
+  <div class="src"><span class="tag c-pub">공개 조사</span> 헤이딜러 공식 블로그의 예시(13일 인수, 15일 오후 6시 마감)대로 인수일을 1일째로 셉니다. <span class="tag c-asm">가정</span> 문자 문안과 보내는 시각. 주말과 공휴일 계산, 실제 발송 채널은 입사 후 확인합니다. 웹 포트폴리오에서 날짜를 바꿔 볼 수 있습니다.</div>
+</section>
+<script>
+(function(){
+  var inp=document.getElementById('dl-input'); if(!inp) return;
+  var W=['일','월','화','수','목','금','토'];
+  function hm(d){var h=d.getHours(),m=d.getMinutes();return (h<12?'오전 ':'오후 ')+(h%12||12)+'시'+(m?' '+m+'분':'');}
+  function day(d){return (d.getMonth()+1)+'월 '+d.getDate()+'일('+W[d.getDay()]+')';}
+  function upd(){
+    if(!inp.value) return;
+    var a=new Date(inp.value); if(isNaN(a)) return;
+    var e=new Date(a.getFullYear(),a.getMonth(),a.getDate()+2,18,0);
+    var h=Math.round((e-a)/36e5);
+    document.getElementById('dl-in').textContent=day(a)+' '+hm(a);
+    document.getElementById('dl-out').innerHTML=day(e)+'<br>오후 6시';
+    document.getElementById('dl-left').textContent=h+'시간';
+    document.getElementById('dl-m1').textContent=day(e)+' 오후 6시';
+    var n=new Date(a.getFullYear(),a.getMonth(),a.getDate()+1);
+    document.getElementById('dl-t1').textContent=day(a);
+    document.getElementById('dl-t2').textContent=day(n);
+    document.getElementById('dl-t3').textContent=day(e);
+    document.getElementById('dl-warn').style.visibility=(e.getDay()%6===0)?'visible':'hidden';
+  }
+  inp.addEventListener('input',upd);
+})();
+</script>
+
+<!-- 12 기여 -->
 <section class="slide">
-  <div class="top"><span class="pill">10 기여 방안</span><span class="pno">11</span></div>
+  <div class="top"><span class="pill">11 기여 방안</span><span class="pno">12</span></div>
   <h1>같은 일이 <em>다시 생기지 않게</em> 만드는 사람입니다</h1>
   <div class="fill" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm">
     <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:34pt">400만 원</div><div><div style="font-size:16pt;font-weight:800">못 받은 수당 찾기</div><div style="font-size:13pt;margin-top:1mm">기록 대조로 9명분 발견, 두 번 거절 뒤 2주 만에 지급</div></div></div>
