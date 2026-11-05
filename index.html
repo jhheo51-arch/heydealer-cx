@@ -75,6 +75,17 @@
   .hb.hl { font-weight:800; color:var(--strong); }
   /* 번호 사각 */
   .sq { width:20mm; height:20mm; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:30pt; font-weight:800; flex-shrink:0; }
+  /* 워크플로 스윔레인 */
+  .wfh { background:var(--bg2); border-radius:10px; padding:1.6mm 2mm; font-size:12pt; font-weight:800; text-align:center; }
+  .wfl { display:flex; flex-direction:column; justify-content:center; font-size:12pt; font-weight:800; color:var(--strong); line-height:1.25; }
+  .wfl small { display:block; font-size:10.5pt; font-weight:600; color:var(--weak); margin-top:1mm; }
+  .wfc { border-radius:10px; padding:1.6mm 2.4mm; background:var(--bg2); display:flex; flex-direction:column; justify-content:center; }
+  .wfc b { display:block; font-size:10pt; color:var(--red); margin-bottom:0.8mm; }
+  .wfc.red { background:#FF4D5214; border:1.5px solid var(--red); }
+  .wfc.on { background:var(--primary-a); border:1.5px solid var(--primary); font-weight:600; color:var(--strong); }
+  .wfc.hot2 { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .wfc.tool { background:#fff; border:1.5px dashed var(--none); color:var(--weak); font-weight:600; }
+  .wfc.gray0 { background:transparent; border:1.5px dashed var(--line); }
   .scr { display:none; }
   @media screen { .scr { display:block; width:100%; margin-top:3mm; font:inherit; font-size:13pt; padding:2.5mm 3mm; border-radius:10px; border:0; } }
   .down { width:0; height:0; border-left:7mm solid transparent; border-right:7mm solid transparent; border-top:5mm solid var(--line); margin:0 auto; }
@@ -103,8 +114,8 @@
       <h1 style="font-size:46pt;line-height:1.16;margin:2mm 0 0">광고가 만든 신뢰를<br><em>차를 받은 뒤의 경험</em>까지</h1>
       <p style="font-size:16pt;color:var(--weak);margin:0;line-height:1.5">앱 리뷰 6,000건과 공개 소비자 조사로<br>차를 사는 고객이 어디서 신뢰를 잃는지 찾고,<br>CX Operator로서 확인하고 설명하고 고칠 일을 정리했습니다.</p>
       <div class="blk gray" style="flex-direction:row;gap:5mm;align-items:center;padding:5mm 6mm">
-        <div class="sq green" style="width:16mm;height:16mm;font-size:20pt">11</div>
-        <div style="font-size:13.5pt;line-height:1.45">문제, 약속, 고객 여정, 경쟁사 비교, VOC, 케이스, 설명 흐름, 개선 과제, AI 상담, 환불 마감 안내, 기여 방안</div>
+        <div class="sq green" style="width:16mm;height:16mm;font-size:20pt">12</div>
+        <div style="font-size:13.5pt;line-height:1.45">문제, 약속, 고객 여정, 경쟁사 비교, VOC, 케이스, 설명 흐름, 개선 과제, AI 상담, 환불 마감 안내, 연락 워크플로, 기여 방안</div>
       </div>
     </div>
     <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:5mm">
@@ -469,9 +480,57 @@
 })();
 </script>
 
-<!-- 12 기여 -->
+<!-- 12 연락 워크플로 -->
+<section class="slide" id="workflow">
+  <div class="top"><span class="pill">11 연락이 끊기지 않는 워크플로</span><span class="pno">12</span></div>
+  <h1>문의가 <em>다른 팀으로 넘어간 동안</em>에도 고객 쪽은 비우지 않습니다</h1>
+  <div class="row fill" style="gap:4mm">
+    <div class="blk black" style="flex:0 0 66mm;justify-content:space-between;padding:5mm 5.5mm">
+      <div class="k">문제 정의</div>
+      <div><div class="huge t-g num" style="font-size:52pt">3/4</div><div style="font-size:12.5pt;font-weight:700;margin-top:2mm;line-height:1.35">인수 뒤 보증, 수리 문제를 겪은 구매 고객 글 중 연락이 끊겼다는 글</div></div>
+      <div style="font-size:11.5pt;line-height:1.42"><b style="color:var(--primary)">시작한 이유</b><br>팔 때 만족 1위, 살 때 4위. 그 차이가 차를 받은 뒤에 생긴다고 보고, 인수 뒤 문의가 흘러가는 길을 그렸습니다.</div>
+      <div style="font-size:11.5pt;line-height:1.42"><b style="color:var(--primary)">가설</b><br>판단이 정비팀에 넘어가 있는 동안 고객에게 소식을 줄 사람이 정해져 있지 않다.</div>
+    </div>
+    <div class="fill" style="display:grid;grid-template-columns:27mm repeat(5,1fr);grid-template-rows:auto 1.1fr 1.25fr 0.9fr 0.75fr;gap:1.6mm;font-size:10.5pt;line-height:1.32">
+      <div></div>
+      <div class="wfh">1 접수</div><div class="wfh">2 기록 확인</div><div class="wfh" style="background:var(--strong);color:#fff">3 판단 대기</div><div class="wfh">4 결과 안내</div><div class="wfh">5 종결 확인</div>
+
+      <div class="wfl">고객이<br>겪은 일<small>공개 리뷰</small></div>
+      <div class="wfc">증상과 사진을 보냄</div>
+      <div class="wfc">접수됐는지, 누가 맡았는지 모름</div>
+      <div class="wfc red"><b>케이스 B</b>수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div>
+      <div class="wfc red"><b>케이스 A</b>거절 결론만 듣고 상담 요청이 끊김</div>
+      <div class="wfc">답글은 달리지만 해결됐는지 아무도 묻지 않음</div>
+
+      <div class="wfl" style="color:var(--primary)">CX<br>Operator<small>제안</small></div>
+      <div class="wfc on">첫 응답에 담당자 이름과 다음 연락 시각</div>
+      <div class="wfc on">점검표, 보증 기간, 제외 항목 대조</div>
+      <div class="wfc on hot2">질문을 정리해 정비팀에 넘기고, 판단 전에도 약속한 시각에 먼저 연락</div>
+      <div class="wfc on hot2">결론, 근거 조항, 대안 견적, 다음 할 일을 한 번에</div>
+      <div class="wfc on">7일 뒤 해결 확인, 반복이면 주간 VOC</div>
+
+      <div class="wfl">정비팀,<br>상품화팀<small>제안</small></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc">보증 대상 판정과 수리 범위 승인</div>
+      <div class="wfc">판정 근거를 CX에 공유</div>
+      <div class="wfc">반복 VOC로 보증, 점검 기준 검토</div>
+
+      <div class="wfl">알림<small>도구</small></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc tool">약속 시각이 지나면 담당자에게 알림</div>
+      <div class="wfc gray0"></div>
+      <div class="wfc tool">7일 재연락 목록 자동 생성</div>
+    </div>
+  </div>
+  <div class="src">고객이 겪은 일은 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 4건뿐이라 비율보다 끊기는 위치를 봅니다. CX와 정비팀의 흐름, 알림은 <span class="tag c-asm">가정</span> 실제 상담 도구와 팀 구성은 입사 후 확인합니다.</div>
+  <div class="band"><b>원칙</b><span>공이 다른 팀에 있어도, 고객에게 소식을 주는 사람은 CX Operator입니다</span></div>
+</section>
+
+<!-- 13 기여 -->
 <section class="slide">
-  <div class="top"><span class="pill">11 기여 방안</span><span class="pno">12</span></div>
+  <div class="top"><span class="pill">12 기여 방안</span><span class="pno">13</span></div>
   <h1>같은 일이 <em>다시 생기지 않게</em> 만드는 사람입니다</h1>
   <div class="fill" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm">
     <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:34pt">400만 원</div><div><div style="font-size:16pt;font-weight:800">못 받은 수당 찾기</div><div style="font-size:13pt;margin-top:1mm">기록 대조로 9명분 발견, 두 번 거절 뒤 2주 만에 지급</div></div></div>
