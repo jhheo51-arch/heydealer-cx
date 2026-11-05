@@ -3,7 +3,7 @@
 헤이딜러 CX Operator(인증중고차) 지원을 위해 만든 개인 분석과 포트폴리오입니다.
 
 - 포트폴리오(웹): https://jhheo51-arch.github.io/heydealer-cx/
-- 포트폴리오(PDF 13쪽): [portfolio.pdf](portfolio.pdf)
+- 포트폴리오(PDF 10쪽): [portfolio.pdf](portfolio.pdf)
 
 ## 왜 봤는가
 

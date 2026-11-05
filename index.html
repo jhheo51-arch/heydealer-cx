@@ -78,9 +78,9 @@
   /* 워크플로 스윔레인 */
   .wfh { background:var(--bg2); border-radius:10px; padding:1.6mm 2mm; font-size:12pt; font-weight:800; text-align:center; }
   .wfl { display:flex; flex-direction:column; justify-content:center; font-size:12pt; font-weight:800; color:var(--strong); line-height:1.25; }
-  .wfl small { display:block; font-size:10.5pt; font-weight:600; color:var(--weak); margin-top:1mm; }
+  .wfl small { display:block; font-size:11pt; font-weight:600; color:var(--weak); margin-top:1mm; }
   .wfc { border-radius:10px; padding:1.6mm 2.4mm; background:var(--bg2); display:flex; flex-direction:column; justify-content:center; }
-  .wfc b { display:block; font-size:10pt; color:var(--red); margin-bottom:0.8mm; }
+  .wfc b { display:block; font-size:11.5pt; color:var(--red); margin-bottom:0.8mm; }
   .wfc.red { background:#FF4D5214; border:1.5px solid var(--red); }
   .wfc.on { background:var(--primary-a); border:1.5px solid var(--primary); font-weight:600; color:var(--strong); }
   .wfc.hot2 { background:var(--primary); color:#fff; border-color:var(--primary); }
@@ -88,6 +88,19 @@
   .wfc.gray0 { background:transparent; border:1.5px dashed var(--line); }
   .scr { display:none; }
   @media screen { .scr { display:block; width:100%; margin-top:3mm; font:inherit; font-size:13pt; padding:2.5mm 3mm; border-radius:10px; border:0; } }
+  .toc { display:flex; gap:4mm; align-items:flex-start; padding:3.6mm 0; border-top:1.5px solid var(--line); }
+  .toc:first-of-type { border-top:0; }
+  .black .toc { border-top-color:#FFFFFF33; }
+  .toc .tn { font-size:22pt; font-weight:800; color:var(--primary); width:13mm; flex-shrink:0; line-height:1.1; }
+  .toc .tt { font-size:17pt; font-weight:800; line-height:1.25; }
+  .toc .td { font-size:13pt; margin-top:1mm; opacity:.72; line-height:1.35; }
+  .toc .tp { margin-left:auto; font-size:15pt; font-weight:800; opacity:.6; }
+  .chev.slim > div { padding:2mm 3mm 2mm 9.5mm; }
+  .chev.slim > div:first-child { padding-left:4.5mm; }
+  .voc .hb { font-size:12.5pt; grid-template-columns:40mm 1fr 13mm; }
+  .voc .hb .t { height:6.5mm; }
+  .voc .hb .v { font-size:13.5pt; }
+  .band .tag { background:#fff; }
   .down { width:0; height:0; border-left:7mm solid transparent; border-right:7mm solid transparent; border-top:5mm solid var(--line); margin:0 auto; }
   @media screen {
     html { background:#F7F8FB; }
@@ -114,8 +127,8 @@
       <h1 style="font-size:46pt;line-height:1.16;margin:2mm 0 0">광고가 만든 신뢰를<br><em>차를 받은 뒤의 경험</em>까지</h1>
       <p style="font-size:16pt;color:var(--weak);margin:0;line-height:1.5">앱 리뷰 6,000건과 공개 소비자 조사로<br>차를 사는 고객이 어디서 신뢰를 잃는지 찾고,<br>CX Operator로서 확인하고 설명하고 고칠 일을 정리했습니다.</p>
       <div class="blk gray" style="flex-direction:row;gap:5mm;align-items:center;padding:5mm 6mm">
-        <div class="sq green" style="width:16mm;height:16mm;font-size:20pt">12</div>
-        <div style="font-size:13.5pt;line-height:1.45">문제, 약속, 고객 여정, 경쟁사 비교, VOC, 케이스, 설명 흐름, 개선 과제, AI 상담, 환불 마감 안내, 연락 워크플로, 기여 방안</div>
+        <div class="sq green" style="width:16mm;height:16mm;font-size:20pt">8</div>
+        <div style="font-size:13.5pt;line-height:1.45">문제와 약속, 고객 여정과 VOC, 3사 정책 비교, 케이스와 설명 흐름, 연락 워크플로, 환불 마감 계산기, 개선 과제와 AI, 기여 방안</div>
       </div>
     </div>
     <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:5mm">
@@ -128,102 +141,82 @@
   <div class="band"><b>관점</b><span>고객이 브랜드를 진짜로 판단하는 순간은 차를 받은 뒤 문제가 생겼을 때입니다</span></div>
 </section>
 
-<!-- 2 문제 -->
+<!-- 2 목차 -->
 <section class="slide">
-  <div class="top"><span class="pill">01 헤이딜러와 고객의 문제</span><span class="pno">2</span></div>
-  <h1>팔 때 만족 <em>1위</em>, 살 때 만족 <em style="color:var(--red)">4위</em></h1>
+  <div class="top"><span class="pill">목차</span><span class="pno">2</span></div>
+  <h1>8개 주제를 <em>찾은 문제</em>와 <em>할 일</em>로 나눴습니다</h1>
   <div class="row fill">
-    <div class="blk gray" style="flex:1 1 0">
-      <h3>처분 만족도 <span class="t-g">전년 +5%p</span></h3>
-      <div class="cols">
-        <div><div class="v t-g num">59%</div><div class="b" style="height:59%;background:var(--primary)"></div><div class="n">헤이딜러</div></div>
-        <div><div class="v num">50%</div><div class="b" style="height:50%"></div><div class="n">K카</div></div>
-        <div><div class="v num">37%</div><div class="b" style="height:37%"></div><div class="n">엔카</div></div>
-        <div><div class="v num">32%</div><div class="b" style="height:32%"></div><div class="n">KB차차차</div></div>
-      </div>
+    <div class="blk gray" style="flex:1"><div class="k">찾은 문제</div>
+      <div class="toc"><span class="tn">01</span><div><div class="tt">팔 때 1위, 살 때 4위</div><div class="td">만족도 조사와 광고 약속 3개</div></div><span class="tp">3</span></div>
+      <div class="toc"><span class="tn">02</span><div><div class="tt">고객 여정과 VOC</div><div class="td">1~3점 리뷰 452건 분류와 인수 뒤 사례</div></div><span class="tp">4</span></div>
+      <div class="toc"><span class="tn">03</span><div><div class="tt">3사 정책 비교</div><div class="td">헤이딜러, K카, 엔카의 환불과 보증</div></div><span class="tp">5</span></div>
     </div>
-    <div class="blk gray" style="flex:1 1 0">
-      <h3>구입 만족도 <span class="t-r">전년 -15%p</span></h3>
-      <div class="cols">
-        <div><div class="v num">63%</div><div class="b" style="height:63%"></div><div class="n">K카</div></div>
-        <div><div class="v num">47%</div><div class="b" style="height:47%"></div><div class="n">엔카</div></div>
-        <div><div class="v num">42%</div><div class="b" style="height:42%"></div><div class="n">KB차차차</div></div>
-        <div><div class="v t-r num">36%</div><div class="b" style="height:36%;background:var(--red)"></div><div class="n">헤이딜러</div></div>
-      </div>
+    <div class="blk greena" style="flex:1.12;border:2px solid var(--primary)"><div class="k">CX Operator로서 할 일</div>
+      <div class="toc"><span class="tn">04</span><div><div class="tt">케이스와 설명 흐름</div><div class="td">보증 거절과 수리 지연을 설명하는 순서</div></div><span class="tp">6</span></div>
+      <div class="toc"><span class="tn">05</span><div><div class="tt">연락 워크플로</div><div class="td">다른 팀에 넘어간 동안에도 먼저 연락</div></div><span class="tp">7</span></div>
+      <div class="toc"><span class="tn">06</span><div><div class="tt">환불 마감 계산기</div><div class="td">인수 일시로 마감 시각과 안내 문자 3개</div></div><span class="tp">8</span></div>
+      <div class="toc"><span class="tn">07</span><div><div class="tt">개선 과제와 AI</div><div class="td">손해 크기로 정한 순서와 AI와 나눌 일</div></div><span class="tp">9</span></div>
     </div>
-    <div class="col" style="flex:0 0 74mm">
-      <div class="blk white fill" style="justify-content:center"><div class="k">파는 고객</div><div style="font-size:15pt;font-weight:700">빠른 견적을 경험합니다. 불만은 주로 감가입니다.</div></div>
-      <div class="blk black fill" style="justify-content:center"><div class="k">사는 고객</div><div style="font-size:15pt;font-weight:700">차를 받은 뒤에야 상태를 압니다. 이상이 생기면 보증, 수리, 연락이 한꺼번에 문제가 됩니다.</div></div>
+    <div class="blk black" style="flex:0.82"><div class="k">저의 기여</div>
+      <div class="toc"><span class="tn">08</span><div><div class="tt">기여 방안</div><div class="td">실제 경험 2개, 개인 프로젝트 2개, 입사 뒤 3개월 계획</div></div><span class="tp">10</span></div>
     </div>
   </div>
-  <div class="src">컨슈머인사이트 제25차 연례 자동차기획조사(2025년 7월, 전체 표본 10만 명), 보도자료 2026.02.25 <span class="tag c-pub">공개 조사</span> 플랫폼별 응답자 수는 보도자료에 없음. 오른쪽은 제 해석이며 내부 데이터로 다시 확인할 가설</div>
+  <div class="band" style="font-size:14.5pt"><b>읽는 법</b><span>숫자 옆 표시로 근거를 구분합니다</span><span class="tag c-pub" style="font-size:13pt">공개 조사</span><span class="tag c-smp" style="font-size:13pt">탐색 표본</span><span class="tag c-asm" style="font-size:13pt">가정</span><span style="font-weight:500;color:#FFFFFFB3;font-size:13pt">가정은 입사 후 확인할 부분입니다</span></div>
+</section>
+
+<!-- 3 문제와 약속 -->
+<section class="slide">
+  <div class="top"><span class="pill">01 문제와 약속</span><span class="pno">3</span></div>
+  <h1>팔 때 만족 <em>1위</em>, 살 때 만족 <em style="color:var(--red)">4위</em></h1>
+  <div class="row fill">
+    <div class="blk gray" style="flex:1;flex-direction:row;gap:5mm">
+      <div class="col" style="flex:1;gap:0"><h3>처분 만족도 <span class="t-g">+5%p</span></h3><div class="cols"><div><div class="v t-g num">59%</div><div class="b" style="height:59%;background:var(--primary)"></div><div class="n">헤이딜러</div></div><div><div class="v num">50%</div><div class="b" style="height:50%"></div><div class="n">K카</div></div><div><div class="v num">37%</div><div class="b" style="height:37%"></div><div class="n">엔카</div></div><div><div class="v num">32%</div><div class="b" style="height:32%"></div><div class="n">KB</div></div></div></div>
+      <div class="col" style="flex:1;gap:0"><h3>구입 만족도 <span class="t-r">-15%p</span></h3><div class="cols"><div><div class="v num">63%</div><div class="b" style="height:63%"></div><div class="n">K카</div></div><div><div class="v num">47%</div><div class="b" style="height:47%"></div><div class="n">엔카</div></div><div><div class="v num">42%</div><div class="b" style="height:42%"></div><div class="n">KB</div></div><div><div class="v t-r num">36%</div><div class="b" style="height:36%;background:var(--red)"></div><div class="n">헤이딜러</div></div></div></div>
+    </div>
+    <div class="col" style="flex:1.3;gap:3mm">
+      <div class="k" style="margin:0 0 0 1mm">광고의 약속이 시험받는 순간</div>
+      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">모든 차량 무사고</span><span class="tag c-smp">리뷰 1271</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">다른 정비소에서 교환 흔적이 나올 때</div></div>
+      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">1년 무료 보증</span><span class="tag c-smp">리뷰 578</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">쇼바 결함이 소모품이라 거절될 때</div></div>
+      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">단순변심 무료 환불</span><span class="tag c-asm">가정</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">환불 기간이 지난 뒤 이상을 발견할 때</div></div>
+    </div>
+  </div>
+  <div class="src"><span class="tag c-pub">공개 조사</span> 컨슈머인사이트 제25차 연례 자동차기획조사(2025년 7월, 전체 표본 10만 명), 보도자료 2026.02.25. 플랫폼별 응답자 수는 보도자료에 없음. 약속은 heydealer.com/market/cars와 광고 youtu.be/NuFF06HlvzM</div>
   <div class="band"><b>질문</b><span>사는 고객의 인수 뒤 경험을, 팔 때만큼 매끄럽게 만들 수 있을까</span></div>
 </section>
 
-<!-- 3 약속 -->
-<section class="slide">
-  <div class="top"><span class="pill">02 광고와 서비스 약속</span><span class="pno">3</span></div>
-  <h1>광고의 약속은 <em>차를 받은 뒤에</em> 시험받습니다</h1>
-  <div class="row fill" style="gap:6mm">
-    <div class="col fill" style="gap:2mm">
-      <div class="blk green" style="padding:7mm"><div class="k">약속 1</div><div style="font-size:27pt;font-weight:800;line-height:1.2">모든 차량 무사고</div></div>
-      <div class="down"></div>
-      <div class="blk gray" style="flex:1;justify-content:center"><div class="k">고객의 기대</div><div style="font-size:18pt;font-weight:700">점검표와 실제 차가 같다</div></div>
-      <div class="down"></div>
-      <div class="blk reda" style="flex:1.3;justify-content:center"><div class="k t-r">시험받는 순간</div><div style="font-size:19pt;font-weight:800;color:var(--strong)">다른 정비소에서 교환 흔적이 나올 때</div><div style="margin-top:3mm"><span class="tag c-smp">리뷰 1271</span></div></div>
+<!-- 4 여정과 VOC -->
+<section class="slide voc">
+  <div class="top"><span class="pill">02 고객 여정과 VOC</span><span class="pno">4</span></div>
+  <h1>구매 고객의 불만은 <em>인수 뒤</em>, <em>정보와 연락</em>에 모입니다</h1>
+  <div class="chev slim" style="height:21mm">
+    <div><div style="font-size:12pt;font-weight:700;white-space:nowrap">차량 탐색</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span>11</span></div></div><div><div style="font-size:12pt;font-weight:700;white-space:nowrap">정보 확인</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span>3</span></div></div><div><div style="font-size:12pt;font-weight:700;white-space:nowrap">구매 결정</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span>3</span></div></div><div><div style="font-size:12pt;font-weight:700;white-space:nowrap">인수</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span class="t-w">0</span></div></div><div class="hot"><div style="font-size:12pt;font-weight:700;white-space:nowrap">이상 발견</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span>2</span></div></div><div class="hot"><div style="font-size:12pt;font-weight:700;white-space:nowrap">보증 문의</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span>1</span></div></div><div class="hot"><div style="font-size:12pt;font-weight:700;white-space:nowrap">정비와 보상</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span>1</span></div></div><div><div style="font-size:12pt;font-weight:700;white-space:nowrap">사후 만족</div><div class="num" style="font-size:22pt;font-weight:800;line-height:1.1"><span class="t-w">0</span></div></div>
+  </div>
+  <div class="row fill" style="margin-top:4mm">
+    <div class="blk gray" style="flex:1">
+      <h3>1~3점 리뷰 주제 <span class="t-w">452건</span></h3>
+      <div class="hbars" style="flex:1;justify-content:space-between">
+        <div class="hb"><span>판매 가격과 감가</span><div class="t"><div class="f" style="width:100%"></div></div><span class="v num">162</span></div><div class="hb"><span>앱 오류와 속도</span><div class="t"><div class="f" style="width:58.6%"></div></div><span class="v num">95</span></div><div class="hb"><span>기타, 내용 불명</span><div class="t"><div class="f" style="width:55.6%"></div></div><span class="v num">90</span></div><div class="hb"><span>광고와 이벤트</span><div class="t"><div class="f" style="width:26.5%"></div></div><span class="v num">43</span></div>
+        <div class="hb"><span>고객센터 연결</span><div class="t"><div class="f" style="width:15.4%;background:var(--orange)"></div></div><span class="v num">25</span></div>
+        <div class="hb hl"><span>차량 구매와 사후</span><div class="t"><div class="f" style="width:13%;background:var(--strong)"></div></div><span class="v num">21</span></div>
+        <div class="hb"><span>이력조회, 탁송</span><div class="t"><div class="f" style="width:9.9%"></div></div><span class="v num">16</span></div>
+      </div>
     </div>
-    <div class="col fill" style="gap:2mm">
-      <div class="blk green" style="padding:7mm"><div class="k">약속 2</div><div style="font-size:27pt;font-weight:800;line-height:1.2">1년 무료 보증</div></div>
-      <div class="down"></div>
-      <div class="blk gray" style="flex:1;justify-content:center"><div class="k">고객의 기대</div><div style="font-size:18pt;font-weight:700">1년 안의 고장은 고쳐 준다</div></div>
-      <div class="down"></div>
-      <div class="blk reda" style="flex:1.3;justify-content:center"><div class="k t-r">시험받는 순간</div><div style="font-size:19pt;font-weight:800;color:var(--strong)">쇼바 결함이 소모품이라 거절될 때</div><div style="margin-top:3mm"><span class="tag c-smp">리뷰 578</span></div></div>
-    </div>
-    <div class="col fill" style="gap:2mm">
-      <div class="blk green" style="padding:7mm"><div class="k">약속 3</div><div style="font-size:27pt;font-weight:800;line-height:1.2">단순변심 무료 환불</div></div>
-      <div class="down"></div>
-      <div class="blk gray" style="flex:1;justify-content:center"><div class="k">고객의 기대</div><div style="font-size:18pt;font-weight:700">마음에 안 들면 돌려보낸다</div></div>
-      <div class="down"></div>
-      <div class="blk reda" style="flex:1.3;justify-content:center"><div class="k t-r">시험받는 순간</div><div style="font-size:19pt;font-weight:800;color:var(--strong)">환불 기간이 지난 뒤 이상을 발견할 때</div><div style="margin-top:3mm"><span class="tag c-asm">가정</span></div></div>
+    <div class="col" style="flex:1.1;gap:3mm">
+      <div class="fill" style="display:grid;grid-template-columns:1fr 1fr;gap:3mm">
+        <div class="blk white" style="padding:4mm 5mm"><div class="row" style="justify-content:space-between;align-items:center"><span class="num" style="font-size:22pt;font-weight:800">297</span><span class="tag c-red">몇 주 연락 없음</span></div><div style="font-size:13.5pt;margin-top:2mm;line-height:1.35">브레이크 수리 일부만 승인</div></div>
+        <div class="blk white" style="padding:4mm 5mm"><div class="row" style="justify-content:space-between;align-items:center"><span class="num" style="font-size:22pt;font-weight:800">578</span><span class="tag c-red">상담 요청 끊김</span></div><div style="font-size:13.5pt;margin-top:2mm;line-height:1.35">쇼바 결함, 소모품이라 거절</div></div>
+        <div class="blk white" style="padding:4mm 5mm"><div class="row" style="justify-content:space-between;align-items:center"><span class="num" style="font-size:22pt;font-weight:800">1271</span><span class="tag c-red">전화 불통</span></div><div style="font-size:13.5pt;margin-top:2mm;line-height:1.35">점검과 달리 교환 흔적</div></div>
+        <div class="blk white" style="padding:4mm 5mm"><div class="row" style="justify-content:space-between;align-items:center"><span class="num" style="font-size:22pt;font-weight:800">360</span><span class="tag c-asm">답변 받음</span></div><div style="font-size:13.5pt;margin-top:2mm;line-height:1.35">도어 버튼 고장 누락</div></div>
+      </div>
+      <div class="blk green" style="padding:4mm 6mm"><div class="row" style="align-items:center;gap:5mm"><span class="num" style="font-size:20pt;font-weight:800;white-space:nowrap">1227 | 5점</span><span style="font-size:13.5pt;font-weight:700">1년 케어로 수리비를 바로 받은 고객은 <u>5점</u>을 줬습니다</span></div></div>
     </div>
   </div>
-  <div class="src">출처: heydealer.com/market/cars, 광고 youtu.be/NuFF06HlvzM <span class="tag c-pub">공식 안내</span> 보증 제외 항목과 환불 기간은 입사 후 약관 원문으로 확인합니다.</div>
+  <div class="src"><span class="tag c-smp">탐색 표본</span> Google Play 리뷰 6,000건(2024.03 ~ 2026.11, 작성자 이름 저장 안 함) 중 1~3점 452건을 규칙으로 분류, 무작위 40건을 직접 읽어 33건 일치. 여정 숫자는 차를 사거나 사려는 고객 글 21건입니다. 불만이 큰 사람이 더 쓰므로 비율로 읽지 않습니다.</div>
 </section>
 
-<!-- 4 여정 -->
+<!-- 5 3사 정책 -->
 <section class="slide">
-  <div class="top"><span class="pill">03 고객 여정과 불편 지점</span><span class="pno">4</span></div>
-  <h1>구매 고객의 불만은 <em>인수 뒤에 가장 무겁습니다</em></h1>
-  <div class="chev" style="height:40mm">
-    <div><div style="font-size:12.5pt;font-weight:700">차량 탐색</div><div class="big num">11</div></div>
-    <div><div style="font-size:12.5pt;font-weight:700">정보 확인</div><div class="big num">3</div></div>
-    <div><div style="font-size:12.5pt;font-weight:700">구매 결정</div><div class="big num">3</div></div>
-    <div><div style="font-size:12.5pt;font-weight:700">인수</div><div class="big num t-w">0</div></div>
-    <div class="hot"><div style="font-size:12.5pt;font-weight:700">이상 발견</div><div class="big num">2</div></div>
-    <div class="hot"><div style="font-size:12.5pt;font-weight:700">보증 문의</div><div class="big num">1</div></div>
-    <div class="hot"><div style="font-size:12.5pt;font-weight:700">정비와 보상</div><div class="big num">1</div></div>
-    <div><div style="font-size:12.5pt;font-weight:700">사후 만족</div><div class="big num t-w">0</div></div>
-  </div>
-  <div class="src" style="margin:2mm 0 4mm">차를 사거나 사려는 고객의 글 21건을 여정 단계에 놓은 건수입니다. 차를 받은 뒤 쓴 글은 4건입니다.</div>
-  <div class="row fill">
-    <div style="flex:2.1;display:grid;grid-template-columns:1fr 1fr;gap:4mm">
-      <div class="blk white"><div class="row" style="justify-content:space-between;align-items:center"><span class="mid num">297</span><span class="tag c-red">몇 주 연락 없음</span></div><div style="font-size:15pt;margin-top:3mm">구매 이틀 뒤 브레이크 이상, 수리는 일부만 승인</div></div>
-      <div class="blk white"><div class="row" style="justify-content:space-between;align-items:center"><span class="mid num">578</span><span class="tag c-red">상담 요청 끊김</span></div><div style="font-size:15pt;margin-top:3mm">쇼바 결함이 소모품이라 보증 거절</div></div>
-      <div class="blk white"><div class="row" style="justify-content:space-between;align-items:center"><span class="mid num">1271</span><span class="tag c-red">전화 불통</span></div><div style="font-size:15pt;margin-top:3mm">점검과 달리 휠하우스 교환 차</div></div>
-      <div class="blk white"><div class="row" style="justify-content:space-between;align-items:center"><span class="mid num">360</span><span class="tag c-asm">답변 받음</span></div><div style="font-size:15pt;margin-top:3mm">검수에서 도어 버튼 고장이 빠짐</div></div>
-    </div>
-    <div class="blk green" style="flex:1;justify-content:space-between">
-      <div class="k">같은 제도, 다른 경험</div>
-      <div><div class="mid num">1227 | 5점</div><div style="font-size:16pt;font-weight:700;margin-top:3mm">1년 케어로 수리비를 바로 받았다</div></div>
-      <div style="font-size:14pt">제도보다 <b>처리 과정</b>이 경험을 가른다는 가설</div>
-    </div>
-  </div>
-  <div class="src">Google Play 헤이딜러 리뷰 직접 수집. 리뷰 내용은 작성자 주장이며 사실 여부는 확인하지 않았습니다 <span class="tag c-smp">탐색 표본</span></div>
-</section>
-
-<!-- 5 경쟁사 정책 -->
-<section class="slide">
-  <div class="top"><span class="pill">04 경쟁사 정책 비교</span><span class="pno">5</span></div>
+  <div class="top"><span class="pill">03 3사 정책 비교</span><span class="pno">5</span></div>
   <h1>조건은 가장 좋지만, <em>고객이 놓치기 쉬운 지점</em>이 있습니다</h1>
   <div class="row fill">
     <div style="flex:2.1;display:grid;grid-template-columns:0.75fr 1.2fr 1fr 1fr;grid-template-rows:auto repeat(4,1fr);gap:2mm">
@@ -255,173 +248,87 @@
   <div class="src"><span class="tag c-pub">공개 조사</span> 헤이딜러 공식 블로그(2025.10), K카 보도자료와 기사, 엔카 이용 안내. 블로그 글마다 보증 거리가 1만km와 2만km로 달라 입사 후 약관 원문으로 확인합니다.</div>
 </section>
 
-<!-- 6 대시보드 -->
+<!-- 6 케이스와 설명 -->
 <section class="slide">
-  <div class="top"><span class="pill">05 VOC 대시보드</span><span class="pno">6</span></div>
-  <h1>구매 고객의 불만은 <em>정보와 연락</em>에 모입니다</h1>
-  <div class="row fill">
-    <div class="blk gray" style="flex:1.15">
-      <h3>1~3점 리뷰 주제 <span class="t-w">452건</span></h3>
-      <div class="hbars" style="flex:1;justify-content:space-between">
-        <div class="hb"><span>판매 가격과 감가</span><div class="t"><div class="f" style="width:100%"></div></div><span class="v num">162</span></div>
-        <div class="hb"><span>앱 오류와 속도</span><div class="t"><div class="f" style="width:58.6%"></div></div><span class="v num">95</span></div>
-        <div class="hb"><span>기타, 내용 불명</span><div class="t"><div class="f" style="width:55.6%"></div></div><span class="v num">90</span></div>
-        <div class="hb"><span>광고와 이벤트</span><div class="t"><div class="f" style="width:26.5%"></div></div><span class="v num">43</span></div>
-        <div class="hb"><span>고객센터 연결</span><div class="t"><div class="f" style="width:15.4%;background:var(--orange)"></div></div><span class="v num">25</span></div>
-        <div class="hb hl"><span>차량 구매와 사후</span><div class="t"><div class="f" style="width:13%;background:var(--strong)"></div></div><span class="v num">21</span></div>
-        <div class="hb"><span>이력조회, 탁송</span><div class="t"><div class="f" style="width:9.9%"></div></div><span class="v num">16</span></div>
-      </div>
-    </div>
-    <div class="col" style="flex:1">
-      <div class="blk white" style="flex:1.4">
-        <h3>차를 사는 쪽 글 21건의 유형</h3>
-        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:2mm">
-          <div class="blk black" style="padding:4mm;justify-content:space-between;border-radius:12px"><div class="big num">7</div><div style="font-size:13.5pt;font-weight:700">정보 설명<br>부족</div></div>
-          <div class="blk gray" style="padding:4mm;justify-content:space-between;border-radius:12px;border:1px solid var(--line)"><div class="big num">6</div><div style="font-size:13.5pt;font-weight:700">가격과<br>매물</div></div>
-          <div class="blk" style="padding:4mm;justify-content:space-between;border-radius:12px;background:var(--red);color:#fff"><div class="big num">4</div><div style="font-size:13.5pt;font-weight:700">인수 뒤<br>문제</div></div>
-          <div class="blk gray" style="padding:4mm;justify-content:space-between;border-radius:12px;border:1px solid var(--line)"><div class="big num">4</div><div style="font-size:13.5pt;font-weight:700">지연, 환불,<br>태도</div></div>
-        </div>
-      </div>
-      <div class="blk green" style="flex:1">
-        <div class="row" style="align-items:flex-end;justify-content:space-between"><div><div class="k">회사 답글</div><div class="big num">96.7%</div></div><div style="font-size:15pt;font-weight:700;text-align:right">437 / 452건</div></div>
-        <div style="height:6mm;background:#FFFFFF4D;border-radius:999px;margin-top:3mm;overflow:hidden"><div style="width:96.7%;height:100%;background:#fff"></div></div>
-        <div style="font-size:15pt;font-weight:600;margin-top:3mm">답글은 달립니다. 그 뒤 문제가 끝났는지는 리뷰로 알 수 없습니다.</div>
-      </div>
-    </div>
+  <div class="top"><span class="pill">04 케이스와 설명 흐름</span><span class="pno">6</span></div>
+  <h1>결론보다 <em>기준과 다음 연락</em>을 먼저 알립니다</h1>
+  <div class="chev slim" style="height:15mm">
+    <div><div style="font-size:14pt;font-weight:800;white-space:nowrap"><span class="num">1</span> 접수</div></div><div><div style="font-size:14pt;font-weight:800;white-space:nowrap"><span class="num">2</span> 기록 확인</div></div><div><div style="font-size:14pt;font-weight:800;white-space:nowrap"><span class="num">3</span> 기준 대조</div></div><div><div style="font-size:14pt;font-weight:800;white-space:nowrap"><span class="num">4</span> 전문가 연결</div></div><div class="on"><div style="font-size:14pt;font-weight:800;white-space:nowrap"><span class="num">5</span> 고객 설명</div></div><div class="dark"><div style="font-size:14pt;font-weight:800;white-space:nowrap"><span class="num">6</span> 종결 확인</div></div>
   </div>
-  <div class="src"><span class="tag c-smp">탐색 표본</span> Google Play 리뷰 6,000건(2024.03.21 ~ 2026.11.02, 작성자 이름 저장 안 함) 중 1~3점 452건을 규칙으로 분류하고, 무작위 40건을 직접 읽어 33건 일치를 확인했습니다. 불만이 큰 사람이 더 쓰므로 비율로 읽지 않습니다. 분석 코드 github.com/jhheo51-arch/heydealer-cx</div>
-</section>
-
-<!-- 7 케이스 -->
-<section class="slide">
-  <div class="top"><span class="pill">06 케이스 스터디</span><span class="pno">7</span></div>
-  <h1>결론보다 <em>기준을 먼저</em> 보여 주겠습니다</h1>
-  <div class="row fill">
+  <div class="row fill" style="margin-top:3.5mm">
     <div class="col fill" style="gap:2mm">
-      <div class="blk black" style="padding:5mm 7mm"><div class="k">케이스 A | 리뷰 578</div><div style="font-size:20pt;font-weight:800">쇼바 결함, 소모품이라 거절</div></div>
-      <div class="blk reda" style="padding:4mm 7mm;flex:1;justify-content:center"><div class="k t-r">문제</div><div style="font-size:15pt;font-weight:600">결론만 전달되고 상담 요청은 끊김</div></div>
-      <div class="down"></div>
-      <div class="blk gray" style="padding:4mm 7mm;flex:1;justify-content:center"><div class="k">내 판단</div><div style="font-size:15pt;font-weight:600">근거 없이 거절만 들으면 고객은 약속 위반으로 받아들임</div></div>
-      <div class="down"></div>
-      <div class="blk green" style="padding:4mm 7mm;flex:1;justify-content:center"><div class="k">내 대응과 다음 개선</div><div style="font-size:15pt;font-weight:700">약관 조항, 정비 소견, 다음 연락 시각을 한 번에 안내. 보증 제외 항목은 구매 전에 안내</div></div>
+      <div class="blk black" style="padding:3mm 5.5mm"><div class="k">케이스 A | 리뷰 578</div><div style="font-size:17pt;font-weight:800">쇼바 결함, 소모품이라 거절</div></div>
+      <div class="blk reda" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k t-r">문제</div><div style="font-size:13pt;font-weight:600;line-height:1.35">결론만 전달되고 상담 요청은 끊김</div></div>
+      <div class="blk gray" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k">내 판단</div><div style="font-size:13pt;font-weight:600;line-height:1.35">근거 없이 거절만 들으면 고객은 약속 위반으로 받아들임</div></div>
+      <div class="blk green" style="padding:2.5mm 5.5mm;flex:1.3;justify-content:center;gap:1mm"><div class="k">내 대응과 다음 개선</div><div style="font-size:13pt;font-weight:700;line-height:1.35">조항, 정비 소견, 다음 연락 시각을 함께 안내. 제외 항목은 구매 전 공지</div></div>
     </div>
     <div class="col fill" style="gap:2mm">
-      <div class="blk black" style="padding:5mm 7mm"><div class="k">케이스 B | 리뷰 297</div><div style="font-size:20pt;font-weight:800">브레이크 수리 지연</div></div>
-      <div class="blk reda" style="padding:4mm 7mm;flex:1;justify-content:center"><div class="k t-r">문제</div><div style="font-size:15pt;font-weight:600">수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div></div>
-      <div class="down"></div>
-      <div class="blk gray" style="padding:4mm 7mm;flex:1;justify-content:center"><div class="k">내 판단</div><div style="font-size:15pt;font-weight:600">고객은 지연보다 무엇을 기다리는지 모르는 상태가 더 힘듦</div></div>
-      <div class="down"></div>
-      <div class="blk green" style="padding:4mm 7mm;flex:1;justify-content:center"><div class="k">내 대응과 다음 개선</div><div style="font-size:15pt;font-weight:700">승인된 항목과 이유를 정리해 전달, 매주 먼저 연락. 7일 이상 연락 없는 건은 자동 알림</div></div>
+      <div class="blk black" style="padding:3mm 5.5mm"><div class="k">케이스 B | 리뷰 297</div><div style="font-size:17pt;font-weight:800">브레이크 수리 지연</div></div>
+      <div class="blk reda" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k t-r">문제</div><div style="font-size:13pt;font-weight:600;line-height:1.35">수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div></div>
+      <div class="blk gray" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k">내 판단</div><div style="font-size:13pt;font-weight:600;line-height:1.35">고객은 지연보다 무엇을 기다리는지 모르는 상태가 더 힘듦</div></div>
+      <div class="blk green" style="padding:2.5mm 5.5mm;flex:1.3;justify-content:center;gap:1mm"><div class="k">내 대응과 다음 개선</div><div style="font-size:13pt;font-weight:700;line-height:1.35">승인 항목과 이유를 전달하고 매주 먼저 연락. 7일 공백은 자동 알림</div></div>
+    </div>
+    <div class="blk gray" style="flex:0.95;gap:3mm">
+      <h3 style="margin:0">설명 예시, 케이스 A</h3>
+      <div class="blk white" style="border-radius:18px 18px 18px 4px;padding:4mm 5mm;font-size:13.5pt">증상은 쇼크업소버 쪽으로 보입니다. 보증 대상인지 확인하려고 정비 담당자에게 사진을 보내 두었습니다.</div>
+      <div class="blk greena" style="border-radius:18px 18px 18px 4px;padding:4mm 5mm;font-size:13.5pt;border:2px solid var(--primary)">내일 오후 3시까지 결과와 근거 조항을 알려 드리겠습니다. 대상이 아니어도 가까운 정비소 견적을 함께 드릴게요.</div>
+      <div style="font-size:12pt;color:var(--weak);margin-top:auto"><span class="tag c-asm">가정</span> 예시 문장입니다</div>
     </div>
   </div>
-  <div class="src">리뷰 1건씩의 공개 사례 <span class="tag c-smp">탐색 표본</span> 약관의 소모품 목록과 승인 범위의 이유는 리뷰로 알 수 없어 입사 후 확인합니다. 판정은 정비 담당자와 보증 기준이 합니다.</div>
+  <div class="src">리뷰 1건씩의 공개 사례 <span class="tag c-smp">탐색 표본</span> 소모품 목록과 승인 범위의 이유는 리뷰로 알 수 없어 입사 후 확인합니다.</div>
   <div class="band"><b>원칙</b><span>판정은 기준과 전문가가, 설명과 다음 연락 약속은 CX Operator가</span></div>
 </section>
 
-<!-- 8 설명 흐름 -->
-<section class="slide">
-  <div class="top"><span class="pill">07 보증, 수리, 보상 설명 흐름</span><span class="pno">8</span></div>
-  <h1>확인하고, <em>쉽게 설명하고</em>, 제때 연결합니다</h1>
-  <div class="chev" style="height:38mm">
-    <div><div class="mid num">1</div><div style="font-size:15pt;font-weight:800;margin-top:1.5mm">접수</div><div style="font-size:13.5pt">증상, 시점, 사진</div></div>
-    <div><div class="mid num">2</div><div style="font-size:15pt;font-weight:800;margin-top:1.5mm">기록 확인</div><div style="font-size:13.5pt">점검표, 보증 기간</div></div>
-    <div><div class="mid num">3</div><div style="font-size:15pt;font-weight:800;margin-top:1.5mm">기준 대조</div><div style="font-size:13.5pt">대상과 제외 항목</div></div>
-    <div><div class="mid num">4</div><div style="font-size:15pt;font-weight:800;margin-top:1.5mm">전문가 연결</div><div style="font-size:13.5pt">질문을 정리해 전달</div></div>
-    <div class="on"><div class="mid num">5</div><div style="font-size:15pt;font-weight:800;margin-top:1.5mm">고객 설명</div><div style="font-size:13.5pt">결론, 근거, 다음 연락</div></div>
-    <div class="dark"><div class="mid num">6</div><div style="font-size:15pt;font-weight:800;margin-top:1.5mm">종결 확인</div><div style="font-size:13.5pt">반복이면 VOC</div></div>
-  </div>
-  <div class="row fill" style="margin-top:5mm">
-    <div class="blk gray" style="flex:1.2;justify-content:space-between">
-      <h3>설명 예시, 케이스 A</h3>
-      <div class="blk white" style="border-radius:20px 20px 20px 4px;padding:5mm 6mm;font-size:15pt">증상은 쇼크업소버 쪽으로 보입니다. 보증 대상인지 확인하려고 정비 담당자에게 사진을 보내 두었습니다.</div>
-      <div class="blk greena" style="border-radius:20px 20px 20px 4px;padding:5mm 6mm;font-size:15pt;border:2px solid var(--primary)">내일 오후 3시까지 결과와 근거 조항을 알려 드리겠습니다. 대상이 아니어도 가까운 정비소 견적을 함께 드릴게요.</div>
-      <div class="src" style="margin:0"><span class="tag c-asm">가정</span> 예시 문장입니다. 제외 항목과 제휴 정비 여부는 입사 후 확인</div>
+<!-- 7 연락 워크플로 -->
+<section class="slide" id="workflow">
+  <div class="top"><span class="pill">05 연락 워크플로</span><span class="pno">7</span></div>
+  <h1>문의가 <em>다른 팀으로 넘어간 동안</em>에도 고객 쪽은 비우지 않습니다</h1>
+  <div class="row fill" style="gap:4mm">
+    <div class="blk black" style="flex:0 0 60mm;justify-content:space-between;padding:5mm 5.5mm">
+      <div class="k">문제 정의</div>
+      <div><div class="huge t-g num" style="font-size:52pt">3/4</div><div style="font-size:13.5pt;font-weight:700;margin-top:2mm;line-height:1.35">인수 뒤 보증, 수리 문제를 겪은 구매 고객 글 중 연락이 끊겼다는 글</div></div>
+      <div style="font-size:13.5pt;line-height:1.42"><b style="color:var(--primary)">가설</b><br>판단이 정비팀에 넘어가 있는 동안 고객에게 소식을 줄 사람이 정해져 있지 않다.</div>
     </div>
-    <div class="blk black" style="flex:1;justify-content:space-between">
-      <div class="k">같은 원칙의 개인 프로젝트 | claim-relay</div>
-      <div><div class="huge t-g num">0건</div><div style="font-size:15pt;font-weight:700;margin-top:2mm">사람이 볼 건을 자동 처리로 넘긴 경우</div></div>
-      <div><div class="big num">18/20</div><div style="font-size:15pt;font-weight:700;margin-top:2mm">검토 경로 일치, 단어 규칙만 쓰면 6/20</div></div>
-      <div style="font-size:12pt;color:#FFFFFFB3">AI는 읽기만, 판정은 규칙표 | github.com/jhheo51-arch/claim-relay</div>
+    <div class="fill" style="display:grid;grid-template-columns:25mm repeat(5,1fr);grid-template-rows:auto 1.1fr 1.25fr 0.9fr 0.75fr;gap:1.8mm;font-size:12pt;line-height:1.32">
+      <div></div>
+      <div class="wfh">1 접수</div><div class="wfh">2 기록 확인</div><div class="wfh" style="background:var(--strong);color:#fff">3 판단 대기</div><div class="wfh">4 결과 안내</div><div class="wfh">5 종결 확인</div>
+
+      <div class="wfl">고객이<br>겪은 일<small>공개 리뷰</small></div>
+      <div class="wfc">증상과 사진을 보냄</div>
+      <div class="wfc">접수됐는지, 누가 맡았는지 모름</div>
+      <div class="wfc red"><b>케이스 B</b>수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div>
+      <div class="wfc red"><b>케이스 A</b>거절 결론만 듣고 상담 요청이 끊김</div>
+      <div class="wfc">답글은 달리지만 해결됐는지 아무도 묻지 않음</div>
+
+      <div class="wfl" style="color:var(--primary)">CX<br>Operator<small>제안</small></div>
+      <div class="wfc on">첫 응답에 담당자 이름과 다음 연락 시각</div>
+      <div class="wfc on">점검표, 보증 기간, 제외 항목 대조</div>
+      <div class="wfc on hot2">질문을 정리해 정비팀에 넘기고, 판단 전에도 약속한 시각에 먼저 연락</div>
+      <div class="wfc on hot2">결론, 근거 조항, 대안 견적, 다음 할 일을 한 번에</div>
+      <div class="wfc on">7일 뒤 해결 확인, 반복이면 주간 VOC</div>
+
+      <div class="wfl">정비팀,<br>상품화팀<small>제안</small></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc">보증 대상 판정과 수리 범위 승인</div>
+      <div class="wfc">판정 근거를 CX에 공유</div>
+      <div class="wfc">반복 VOC로 보증, 점검 기준 검토</div>
+
+      <div class="wfl">알림<small>도구</small></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc gray0"></div>
+      <div class="wfc tool">약속 시각이 지나면 담당자에게 알림</div>
+      <div class="wfc gray0"></div>
+      <div class="wfc tool">7일 재연락 목록 자동 생성</div>
     </div>
   </div>
+  <div class="src">고객이 겪은 일은 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 4건뿐이라 비율보다 끊기는 위치를 봅니다. CX와 정비팀의 흐름, 알림은 <span class="tag c-asm">가정</span> 실제 상담 도구와 팀 구성은 입사 후 확인합니다.</div>
+  <div class="band"><b>원칙</b><span>공이 다른 팀에 있어도, 고객에게 소식을 주는 사람은 CX Operator입니다</span></div>
 </section>
 
-<!-- 9 개선 과제 -->
-<section class="slide">
-  <div class="top"><span class="pill">08 우선 개선 과제와 협업</span><span class="pno">9</span></div>
-  <h1>건수보다 <em>고객 손해의 크기</em>로 순서를 정했습니다</h1>
-  <div class="col fill" style="gap:3.5mm">
-    <div class="blk greena fill" style="flex-direction:row;align-items:center;gap:7mm;padding:4mm 7mm;border:2px solid var(--primary)">
-      <div class="sq green">1</div>
-      <div style="flex:1.5;font-size:21pt;font-weight:800">수리 진행 중 건의 연락 약속</div>
-      <div style="flex:0.8;display:flex;align-items:baseline;gap:3mm"><span class="mid num t-g">3/4</span><span style="font-size:13.5pt;font-weight:700;color:var(--weak)">연락 끊김</span></div>
-      <div style="flex:1.1"><span class="tag c-asm">CX 운영</span><div style="font-size:13.5pt;margin-top:1.5mm">약속 시각 안에 먼저 연락한 비율</div></div>
-    </div>
-    <div class="blk gray fill" style="flex-direction:row;align-items:center;gap:7mm;padding:4mm 7mm">
-      <div class="sq black">2</div>
-      <div style="flex:1.5;font-size:21pt;font-weight:800">보증 제외 항목의 구매 전 안내</div>
-      <div style="flex:0.8;display:flex;align-items:baseline;gap:3mm"><span class="mid num">2건</span><span style="font-size:13.5pt;font-weight:700;color:var(--weak)">근거 리뷰</span></div>
-      <div style="flex:1.1"><span class="tag c-asm">상품화, 정비</span><div style="font-size:13.5pt;margin-top:1.5mm">거절로 끝난 보증 문의의 재문의율</div></div>
-    </div>
-    <div class="blk gray fill" style="flex-direction:row;align-items:center;gap:7mm;padding:4mm 7mm">
-      <div class="sq black">3</div>
-      <div style="flex:1.5;font-size:21pt;font-weight:800">점검 범위를 고객 말로 공개</div>
-      <div style="flex:0.8;display:flex;align-items:baseline;gap:3mm"><span class="mid num">2건</span><span style="font-size:13.5pt;font-weight:700;color:var(--weak)">근거 리뷰</span></div>
-      <div style="flex:1.1"><span class="tag c-asm">정비, 마케팅</span><div style="font-size:13.5pt;margin-top:1.5mm">인수 30일 안의 상태 이의 건수</div></div>
-    </div>
-    <div class="blk gray fill" style="flex-direction:row;align-items:center;gap:7mm;padding:4mm 7mm">
-      <div class="sq black">4</div>
-      <div style="flex:1.5;font-size:21pt;font-weight:800">부정 리뷰 뒤 재연락</div>
-      <div style="flex:0.8;display:flex;align-items:baseline;gap:3mm"><span class="mid num">96.7%</span><span style="font-size:13.5pt;font-weight:700;color:var(--weak)">답글만 달림</span></div>
-      <div style="flex:1.1"><span class="tag c-asm">CX 운영, 마케팅</span><div style="font-size:13.5pt;margin-top:1.5mm">구매 고객 부정 리뷰 중 7일 안에 다시 연락한 비율</div></div>
-    </div>
-  </div>
-  <div class="src">근거는 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 함께할 팀과 첫 지표는 <span class="tag c-asm">가정</span> 입사 후 상담 기록으로 순서를 다시 확인합니다.</div>
-  <div class="band"><b>협업</b><span>정비팀에는 정리된 질문을, 제품과 영업팀에는 건수를 붙인 주간 VOC를 보냅니다</span></div>
-</section>
-
-<!-- 10 AICX -->
-<section class="slide">
-  <div class="top"><span class="pill">09 AI와 함께하는 상담</span><span class="pno">10</span></div>
-  <h1>AI는 <em>읽고 찾고</em>, 사람은 <em>약속을 지킵니다</em></h1>
-  <div class="row fill">
-    <div class="blk black" style="flex:0.78;justify-content:space-between">
-      <div class="k">지금 상담의 빈틈, 공개 리뷰</div>
-      <div><div class="huge t-g num">3/4</div><div style="font-size:14.5pt;font-weight:700;margin-top:2mm">인수 뒤 문제 글 중 연락이 끊겼다는 글</div></div>
-      <div><div class="big num">96.7%</div><div style="font-size:14.5pt;font-weight:700;margin-top:2mm">답글은 달리지만, 그 뒤 해결됐는지는 알 수 없음</div></div>
-      <div><div class="big num">25건</div><div style="font-size:14.5pt;font-weight:700;margin-top:2mm">1~3점 중 고객센터 연결 자체가 불만</div></div>
-    </div>
-    <div class="col" style="flex:1.5;gap:3mm">
-      <div style="display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:3mm;font-size:12.5pt;font-weight:800;color:var(--weak);padding:0 2mm"><span>해결책</span><span>AI가 하는 일</span><span>사람이 하는 일</span></div>
-      <div class="blk greena fill" style="display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:3mm;align-items:center;padding:4mm 5mm;border:2px solid var(--primary)">
-        <div style="font-size:17pt;font-weight:800">1. 연락 공백 알림</div>
-        <div style="font-size:13pt">상담 기록에서 다음 연락 약속을 찾음</div>
-        <div style="font-size:13pt">시각이 지난 건에 먼저 연락함</div>
-      </div>
-      <div class="blk gray fill" style="display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:3mm;align-items:center;padding:4mm 5mm">
-        <div style="font-size:17pt;font-weight:800">2. 답변 초안</div>
-        <div style="font-size:13pt">보증 문의에 약관과 FAQ 조항을 찾아 초안 작성</div>
-        <div style="font-size:13pt">정비 소견과 맞춰 고친 뒤 보냄</div>
-      </div>
-      <div class="blk gray fill" style="display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:3mm;align-items:center;padding:4mm 5mm">
-        <div style="font-size:17pt;font-weight:800">3. 환불 마감 먼저</div>
-        <div style="font-size:13pt">시간 외 문의에서 환불, 반납 의도를 분류</div>
-        <div style="font-size:13pt">3일째 오후 6시 전에 먼저 처리</div>
-      </div>
-      <div class="blk gray fill" style="display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:3mm;align-items:center;padding:4mm 5mm">
-        <div style="font-size:17pt;font-weight:800">4. 주간 VOC 분류</div>
-        <div style="font-size:13pt">상담 기록에 유형과 여정 단계를 붙임</div>
-        <div style="font-size:13pt">표본을 직접 읽어 맞는지 확인</div>
-      </div>
-    </div>
-  </div>
-  <div class="src">빈틈은 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 해결책은 <span class="tag c-asm">가정</span> 헤이딜러의 현재 상담 도구는 알 수 없어 입사 후 확인합니다. 같은 원칙으로 claim-relay와 VoC Lens를 만들었습니다.</div>
-  <div class="band"><b>원칙</b><span>보증 판정, 환불 승인, 보상 금액은 AI가 정하지 않습니다</span></div>
-</section>
-
-<!-- 11 환불 마감 안내 -->
+<!-- 8 환불 마감 계산기 -->
 <section class="slide" id="deadline">
-  <div class="top"><span class="pill">10 환불 마감 안내</span><span class="pno">11</span></div>
+  <div class="top"><span class="pill">06 환불 마감 계산기</span><span class="pno">8</span></div>
   <h1>차를 받은 날, 환불 마감을 <em>날짜와 시각으로</em> 알려 드립니다</h1>
   <div class="row fill">
     <div class="blk black" style="flex:0.82;justify-content:space-between">
@@ -480,57 +387,52 @@
 })();
 </script>
 
-<!-- 12 연락 워크플로 -->
-<section class="slide" id="workflow">
-  <div class="top"><span class="pill">11 연락이 끊기지 않는 워크플로</span><span class="pno">12</span></div>
-  <h1>문의가 <em>다른 팀으로 넘어간 동안</em>에도 고객 쪽은 비우지 않습니다</h1>
-  <div class="row fill" style="gap:4mm">
-    <div class="blk black" style="flex:0 0 66mm;justify-content:space-between;padding:5mm 5.5mm">
-      <div class="k">문제 정의</div>
-      <div><div class="huge t-g num" style="font-size:52pt">3/4</div><div style="font-size:12.5pt;font-weight:700;margin-top:2mm;line-height:1.35">인수 뒤 보증, 수리 문제를 겪은 구매 고객 글 중 연락이 끊겼다는 글</div></div>
-      <div style="font-size:11.5pt;line-height:1.42"><b style="color:var(--primary)">시작한 이유</b><br>팔 때 만족 1위, 살 때 4위. 그 차이가 차를 받은 뒤에 생긴다고 보고, 인수 뒤 문의가 흘러가는 길을 그렸습니다.</div>
-      <div style="font-size:11.5pt;line-height:1.42"><b style="color:var(--primary)">가설</b><br>판단이 정비팀에 넘어가 있는 동안 고객에게 소식을 줄 사람이 정해져 있지 않다.</div>
+<!-- 9 개선 과제와 AI -->
+<section class="slide">
+  <div class="top"><span class="pill">07 개선 과제와 AI</span><span class="pno">9</span></div>
+  <h1><em>고객 손해의 크기</em>로 순서를 정하고, AI와 일을 나눕니다</h1>
+  <div class="row fill">
+    <div class="col fill" style="flex:1.6;gap:3mm">
+      <div class="blk greena fill" style="flex-direction:row;align-items:center;gap:5mm;padding:3mm 5mm;border:2px solid var(--primary)">
+      <div class="sq green" style="width:15mm;height:15mm;font-size:22pt">1</div>
+      <div style="flex:1.4;font-size:17pt;font-weight:800">수리 진행 중 건의 연락 약속</div>
+      <div style="flex:0.75"><span class="num t-g" style="font-size:22pt;font-weight:800">3/4</span><div style="font-size:12pt;font-weight:700;color:var(--weak)">연락 끊김</div></div>
+      <div style="flex:1.15"><span class="tag c-asm">CX 운영</span><div style="font-size:12.5pt;margin-top:1mm">약속 시각 안에 먼저 연락한 비율</div></div>
     </div>
-    <div class="fill" style="display:grid;grid-template-columns:27mm repeat(5,1fr);grid-template-rows:auto 1.1fr 1.25fr 0.9fr 0.75fr;gap:1.6mm;font-size:10.5pt;line-height:1.32">
-      <div></div>
-      <div class="wfh">1 접수</div><div class="wfh">2 기록 확인</div><div class="wfh" style="background:var(--strong);color:#fff">3 판단 대기</div><div class="wfh">4 결과 안내</div><div class="wfh">5 종결 확인</div>
-
-      <div class="wfl">고객이<br>겪은 일<small>공개 리뷰</small></div>
-      <div class="wfc">증상과 사진을 보냄</div>
-      <div class="wfc">접수됐는지, 누가 맡았는지 모름</div>
-      <div class="wfc red"><b>케이스 B</b>수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div>
-      <div class="wfc red"><b>케이스 A</b>거절 결론만 듣고 상담 요청이 끊김</div>
-      <div class="wfc">답글은 달리지만 해결됐는지 아무도 묻지 않음</div>
-
-      <div class="wfl" style="color:var(--primary)">CX<br>Operator<small>제안</small></div>
-      <div class="wfc on">첫 응답에 담당자 이름과 다음 연락 시각</div>
-      <div class="wfc on">점검표, 보증 기간, 제외 항목 대조</div>
-      <div class="wfc on hot2">질문을 정리해 정비팀에 넘기고, 판단 전에도 약속한 시각에 먼저 연락</div>
-      <div class="wfc on hot2">결론, 근거 조항, 대안 견적, 다음 할 일을 한 번에</div>
-      <div class="wfc on">7일 뒤 해결 확인, 반복이면 주간 VOC</div>
-
-      <div class="wfl">정비팀,<br>상품화팀<small>제안</small></div>
-      <div class="wfc gray0"></div>
-      <div class="wfc gray0"></div>
-      <div class="wfc">보증 대상 판정과 수리 범위 승인</div>
-      <div class="wfc">판정 근거를 CX에 공유</div>
-      <div class="wfc">반복 VOC로 보증, 점검 기준 검토</div>
-
-      <div class="wfl">알림<small>도구</small></div>
-      <div class="wfc gray0"></div>
-      <div class="wfc gray0"></div>
-      <div class="wfc tool">약속 시각이 지나면 담당자에게 알림</div>
-      <div class="wfc gray0"></div>
-      <div class="wfc tool">7일 재연락 목록 자동 생성</div>
+      <div class="blk gray fill" style="flex-direction:row;align-items:center;gap:5mm;padding:3mm 5mm">
+      <div class="sq black" style="width:15mm;height:15mm;font-size:22pt">2</div>
+      <div style="flex:1.4;font-size:17pt;font-weight:800">보증 제외 항목의 구매 전 안내</div>
+      <div style="flex:0.75"><span class="num" style="font-size:22pt;font-weight:800">2건</span><div style="font-size:12pt;font-weight:700;color:var(--weak)">근거 리뷰</div></div>
+      <div style="flex:1.15"><span class="tag c-asm">상품화, 정비</span><div style="font-size:12.5pt;margin-top:1mm">거절로 끝난 보증 문의의 재문의율</div></div>
+    </div>
+      <div class="blk gray fill" style="flex-direction:row;align-items:center;gap:5mm;padding:3mm 5mm">
+      <div class="sq black" style="width:15mm;height:15mm;font-size:22pt">3</div>
+      <div style="flex:1.4;font-size:17pt;font-weight:800">점검 범위를 고객 말로 공개</div>
+      <div style="flex:0.75"><span class="num" style="font-size:22pt;font-weight:800">2건</span><div style="font-size:12pt;font-weight:700;color:var(--weak)">근거 리뷰</div></div>
+      <div style="flex:1.15"><span class="tag c-asm">정비, 마케팅</span><div style="font-size:12.5pt;margin-top:1mm">인수 30일 안의 상태 이의 건수</div></div>
+    </div>
+      <div class="blk gray fill" style="flex-direction:row;align-items:center;gap:5mm;padding:3mm 5mm">
+      <div class="sq black" style="width:15mm;height:15mm;font-size:22pt">4</div>
+      <div style="flex:1.4;font-size:17pt;font-weight:800">부정 리뷰 뒤 재연락</div>
+      <div style="flex:0.75"><span class="num" style="font-size:22pt;font-weight:800">96.7%</span><div style="font-size:12pt;font-weight:700;color:var(--weak)">답글만 달림</div></div>
+      <div style="flex:1.15"><span class="tag c-asm">CX 운영, 마케팅</span><div style="font-size:12.5pt;margin-top:1mm">구매 고객 부정 리뷰 중 7일 안에 다시 연락한 비율</div></div>
+    </div>
+    </div>
+    <div class="blk black" style="flex:1;justify-content:space-between;padding:5mm 6mm">
+      <div class="k" style="margin:0">AI와 나누는 일</div>
+      <div style="border-top:1.5px solid #FFFFFF33;padding-top:2.5mm"><div style="font-size:15pt;font-weight:800;color:var(--primary)">연락 공백 알림</div><div style="font-size:12.5pt;margin-top:1mm;line-height:1.4"><b>AI</b> 상담 기록에서 다음 연락 약속을 찾음<br><b>사람</b> 시각이 지난 건에 먼저 연락</div></div>
+      <div style="border-top:1.5px solid #FFFFFF33;padding-top:2.5mm"><div style="font-size:15pt;font-weight:800;">답변 초안</div><div style="font-size:12.5pt;margin-top:1mm;line-height:1.4"><b>AI</b> 약관과 FAQ 조항을 찾아 초안 작성<br><b>사람</b> 정비 소견과 맞춰 고친 뒤 보냄</div></div>
+      <div style="border-top:1.5px solid #FFFFFF33;padding-top:2.5mm"><div style="font-size:15pt;font-weight:800;">환불 마감 먼저</div><div style="font-size:12.5pt;margin-top:1mm;line-height:1.4"><b>AI</b> 시간 외 문의에서 환불, 반납 의도 분류<br><b>사람</b> 3일째 오후 6시 전에 먼저 처리</div></div>
+      <div style="border-top:1.5px solid #FFFFFF33;padding-top:2.5mm"><div style="font-size:15pt;font-weight:800;">주간 VOC 분류</div><div style="font-size:12.5pt;margin-top:1mm;line-height:1.4"><b>AI</b> 상담 기록에 유형과 여정 단계를 붙임<br><b>사람</b> 표본을 직접 읽어 맞는지 확인</div></div>
     </div>
   </div>
-  <div class="src">고객이 겪은 일은 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 4건뿐이라 비율보다 끊기는 위치를 봅니다. CX와 정비팀의 흐름, 알림은 <span class="tag c-asm">가정</span> 실제 상담 도구와 팀 구성은 입사 후 확인합니다.</div>
-  <div class="band"><b>원칙</b><span>공이 다른 팀에 있어도, 고객에게 소식을 주는 사람은 CX Operator입니다</span></div>
+  <div class="src">근거는 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 함께할 팀, 첫 지표, AI 역할은 <span class="tag c-asm">가정</span> 1~3점 리뷰 452건 중 437건(96.7%)에 답글이 달렸습니다. 현재 상담 도구는 입사 후 확인합니다.</div>
+  <div class="band"><b>원칙</b><span>보증 판정, 환불 승인, 보상 금액은 AI가 정하지 않습니다</span></div>
 </section>
 
-<!-- 13 기여 -->
+<!-- 10 기여 -->
 <section class="slide">
-  <div class="top"><span class="pill">12 기여 방안</span><span class="pno">13</span></div>
+  <div class="top"><span class="pill">08 기여 방안</span><span class="pno">10</span></div>
   <h1>같은 일이 <em>다시 생기지 않게</em> 만드는 사람입니다</h1>
   <div class="fill" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm">
     <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:34pt">400만 원</div><div><div style="font-size:16pt;font-weight:800">못 받은 수당 찾기</div><div style="font-size:13pt;margin-top:1mm">기록 대조로 9명분 발견, 두 번 거절 뒤 2주 만에 지급</div></div></div>
