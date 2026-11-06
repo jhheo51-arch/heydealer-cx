@@ -98,6 +98,7 @@
 | 규칙 검증 | 규칙 결과 40건을 무작위로 직접 읽어 33건 일치. 틀린 7건은 광고나 앱 오류 글에 '딜러', '상담' 같은 단어가 섞인 경우 |
 | 직접 분류 | 차를 사거나 사려는 고객의 글 21건(차를 받은 뒤 쓴 글 4건)을 전부 읽고 VOC 유형과 여정 단계를 붙임 |
 | 정책 비교 | 헤이딜러 공식 블로그(2025.10), K카 보도자료, 엔카 이용 안내로 환불과 보증 조건 비교 |
+| 스토어 교차 확인 | App Store 리뷰 250건(2026-02-08 ~ 2026-11-03)을 모아 같은 기간 Google Play 1,218건과 같은 규칙으로 비교 (`analysis/collect_appstore.py`, `analysis/compare_stores.py`) |
 
 ## 무엇이 나왔는가
 
@@ -106,6 +107,8 @@
 - 452건 중 437건(96.7%)에 회사 답글이 달렸습니다. 답글 뒤 문제가 끝났는지는 리뷰로 알 수 없습니다.
 - 1년 케어로 수리비를 바로 받았다는 5점 리뷰도 있어, 같은 보증 제도 안에서도 처리 과정에 따라 평가가 갈린다고 봤습니다.
 - 정책 비교에서 헤이딜러는 1년 보증을 추가 비용 없이 주고, K카는 이를 유료 상품으로 둡니다. 다만 3일째 오후 6시 환불 마감과 보증 제외 항목은 고객이 놓치기 쉬워, 인수 당일 안내에 먼저 넣자고 제안했습니다.
+
+- App Store와 Google Play를 같은 기간으로 맞추면 평균 별점(4.50, 4.57)과 1~3점 비중(12.4%, 10.2%), 주제 순위가 비슷했습니다. App Store에서는 고객센터 연결 불만 비중이 23%로 Google Play(10%)보다 높았지만 31건이라 단정하지 않습니다. App Store의 구매 관련 1~3점 3건 중 2건도 연락이 없었다는 내용이라, 위 가설과 같은 방향입니다. 자세한 표는 [analysis/appstore_compare.md](analysis/appstore_compare.md)에 있습니다.
 
 집계는 [analysis/summary.json](analysis/summary.json), 건별 분류 결과는 [analysis/coded_low_no_text.csv](analysis/coded_low_no_text.csv)에 있습니다.
 
@@ -120,6 +123,7 @@
 ## 한계
 
 - 앱 리뷰는 불만이 있는 사람이 더 많이 쓰므로 전체 고객의 비율이 아닙니다. 탐색 표본으로만 읽어야 합니다.
+- 주 분석은 Google Play 리뷰입니다. App Store는 공개 경로로 최신 250건만 받을 수 있어 약 9개월만 교차 확인했습니다.
 - 헤이딜러 내부 상담 데이터가 아닙니다. 개선 과제의 순서와 지표는 가설이며, 실제 상담 기록으로 다시 확인해야 합니다.
 - 보증 제외 항목, 환불 기간 같은 세부 조건은 약관 원문으로 확인하지 않았습니다. 공식 블로그 글마다 보증 거리가 1만km와 2만km로 달라 입사 후 약관으로 확인합니다.
 - 엔카의 보증 조건은 공식 자료에서 확인하지 못해 비교 표에 그대로 적었습니다.
@@ -135,6 +139,8 @@ pip install google-play-scraper
 cd analysis
 python collect.py    # 리뷰 6,000건 수집, heydealer_reviews.json (저장소에는 올리지 않음)
 python classify.py   # 1~3점 분류, summary.json과 coded_low.csv 생성
+python collect_appstore.py   # App Store 최신 리뷰 수집, heydealer_reviews_appstore.json (저장소에는 올리지 않음)
+python compare_stores.py     # 같은 기간 두 스토어 별점과 주제 비교
 ```
 
 리뷰는 최신순으로 수집하므로 실행하는 날에 따라 기간과 건수가 달라집니다.
@@ -147,6 +153,9 @@ python classify.py   # 1~3점 분류, summary.json과 coded_low.csv 생성
 | `portfolio.pdf` | 포트폴리오 PDF 10쪽 |
 | `analysis/collect.py` | Google Play 리뷰 수집 |
 | `analysis/classify.py` | 키워드 규칙 분류와 직접 분류 결과 |
+| `analysis/collect_appstore.py` | App Store 리뷰 수집 |
+| `analysis/compare_stores.py` | 같은 기간 두 스토어 비교 |
+| `analysis/appstore_compare.md` | 두 스토어 비교 결과와 한계 |
 | `analysis/summary.json` | 별점, 주제, 구매 VOC 집계 |
 | `analysis/coded_low_no_text.csv` | 1~3점 452건의 건별 분류(원문 없음) |
 
