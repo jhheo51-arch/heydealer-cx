@@ -88,13 +88,22 @@
   .wfc.gray0 { background:transparent; border:1.5px dashed var(--line); }
   .scr { display:none; }
   @media screen { .scr { display:block; width:100%; margin-top:3mm; font:inherit; font-size:13pt; padding:2.5mm 3mm; border-radius:10px; border:0; } }
-  .toc { display:flex; gap:4mm; align-items:flex-start; padding:3.6mm 0; border-top:1.5px solid var(--line); }
-  .toc:first-of-type { border-top:0; }
-  .black .toc { border-top-color:#FFFFFF33; }
-  .toc .tn { font-size:22pt; font-weight:800; color:var(--primary); width:13mm; flex-shrink:0; line-height:1.1; }
-  .toc .tt { font-size:17pt; font-weight:800; line-height:1.25; }
-  .toc .td { font-size:13pt; margin-top:1mm; opacity:.72; line-height:1.35; }
-  .toc .tp { margin-left:auto; font-size:15pt; font-weight:800; opacity:.6; }
+  .tocg { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(4,1fr); grid-auto-flow:column; gap:3.5mm 5mm; }
+  .tocg .blk { flex-direction:row; align-items:center; gap:5mm; padding:3mm 7mm; border-radius:16px; }
+  .tocg .tn { font-size:30pt; font-weight:800; color:var(--primary); width:17mm; flex-shrink:0; line-height:1; letter-spacing:-1pt; }
+  .tocg .tb { flex:1; min-width:0; }
+  .tocg .k { font-size:11pt; margin-bottom:0.8mm; }
+  .tocg .tt { font-size:18.5pt; font-weight:800; line-height:1.2; white-space:nowrap; }
+  .tocg .td { font-size:13pt; margin-top:1mm; color:var(--body); line-height:1.3; white-space:nowrap; }
+  .tocg .black .td { color:#FFFFFFB3; }
+  .tocg .tp { font-size:13pt; font-weight:800; color:var(--weak); white-space:nowrap; }
+  .tocg .black .tp { color:#FFFFFFB3; }
+  .tocg .greena { border:2px solid var(--primary); }
+  .src .tag + .tag, .src .gap { margin-left:0; }
+  .src.two { display:flex; gap:7mm; }
+  .src.two .si { flex:1; min-width:0; display:flex; align-items:flex-start; gap:2mm; }
+  .src.two .si .tag { flex-shrink:0; }
+  .src.two .si > span { padding-top:0.8mm; }
   .chev.slim > div { padding:2mm 3mm 2mm 9.5mm; }
   .chev.slim > div:first-child { padding-left:4.5mm; }
   .voc .hb { font-size:12.5pt; grid-template-columns:40mm 1fr 13mm; }
@@ -121,7 +130,7 @@
 
 <!-- 1 표지 -->
 <section class="slide">
-  <div class="top"><span class="pill">헤이딜러 CX Operator(인증중고차) 지원 포트폴리오</span><span class="pno">허재혁 | 2026.11</span></div>
+  <div class="top"><span class="pill">헤이딜러 CX Operator(인증중고차) 지원 포트폴리오</span><span class="pno">1</span></div>
   <div class="row fill" style="gap:6mm">
     <div class="col" style="flex:1.05;justify-content:space-between;padding:2mm 0">
       <h1 style="font-size:46pt;line-height:1.16;margin:2mm 0 0">광고가 만든 신뢰를<br><em>차를 받은 뒤의 경험</em>까지</h1>
@@ -145,21 +154,15 @@
 <section class="slide">
   <div class="top"><span class="pill">목차</span><span class="pno">2</span></div>
   <h1>8개 주제를 <em>찾은 문제</em>와 <em>할 일</em>로 나눴습니다</h1>
-  <div class="row fill">
-    <div class="blk gray" style="flex:1"><div class="k">찾은 문제</div>
-      <div class="toc"><span class="tn">01</span><div><div class="tt">팔 때 1위, 살 때 4위</div><div class="td">만족도 조사와 광고 약속 3개</div></div><span class="tp">3</span></div>
-      <div class="toc"><span class="tn">02</span><div><div class="tt">고객 여정과 VOC</div><div class="td">1~3점 리뷰 452건 분류와 인수 뒤 사례</div></div><span class="tp">4</span></div>
-      <div class="toc"><span class="tn">03</span><div><div class="tt">3사 정책 비교</div><div class="td">헤이딜러, K카, 엔카의 환불과 보증</div></div><span class="tp">5</span></div>
-    </div>
-    <div class="blk greena" style="flex:1.12;border:2px solid var(--primary)"><div class="k">CX Operator로서 할 일</div>
-      <div class="toc"><span class="tn">04</span><div><div class="tt">케이스와 설명 흐름</div><div class="td">보증 거절과 수리 지연을 설명하는 순서</div></div><span class="tp">6</span></div>
-      <div class="toc"><span class="tn">05</span><div><div class="tt">연락 워크플로</div><div class="td">다른 팀에 넘어간 동안에도 먼저 연락</div></div><span class="tp">7</span></div>
-      <div class="toc"><span class="tn">06</span><div><div class="tt">환불 마감 계산기</div><div class="td">인수 일시로 마감 시각과 안내 문자 3개</div></div><span class="tp">8</span></div>
-      <div class="toc"><span class="tn">07</span><div><div class="tt">개선 과제와 AI</div><div class="td">손해 크기로 정한 순서와 AI와 나눌 일</div></div><span class="tp">9</span></div>
-    </div>
-    <div class="blk black" style="flex:0.82"><div class="k">저의 기여</div>
-      <div class="toc"><span class="tn">08</span><div><div class="tt">기여 방안</div><div class="td">실제 경험 2개, 개인 프로젝트 2개, 입사 뒤 3개월 계획</div></div><span class="tp">10</span></div>
-    </div>
+  <div class="tocg fill">
+    <div class="blk gray"><span class="tn">01</span><div class="tb"><div class="k">찾은 문제</div><div class="tt">팔 때 1위, 살 때 4위</div><div class="td">만족도 조사와 광고 약속 3개</div></div><span class="tp">3쪽</span></div>
+    <div class="blk gray"><span class="tn">02</span><div class="tb"><div class="k">찾은 문제</div><div class="tt">고객 여정과 VOC</div><div class="td">1~3점 리뷰 452건과 인수 뒤 사례</div></div><span class="tp">4쪽</span></div>
+    <div class="blk gray"><span class="tn">03</span><div class="tb"><div class="k">찾은 문제</div><div class="tt">3사 정책 비교</div><div class="td">헤이딜러, K카, 엔카의 환불과 보증</div></div><span class="tp">5쪽</span></div>
+    <div class="blk greena"><span class="tn">04</span><div class="tb"><div class="k">CX Operator로서 할 일</div><div class="tt">케이스와 설명 흐름</div><div class="td">보증 거절과 수리 지연을 설명하는 순서</div></div><span class="tp">6쪽</span></div>
+    <div class="blk greena"><span class="tn">05</span><div class="tb"><div class="k">CX Operator로서 할 일</div><div class="tt">연락 워크플로</div><div class="td">다른 팀에 넘어간 동안에도 먼저 연락</div></div><span class="tp">7쪽</span></div>
+    <div class="blk greena"><span class="tn">06</span><div class="tb"><div class="k">CX Operator로서 할 일</div><div class="tt">환불 마감 계산기</div><div class="td">인수 일시로 마감 시각과 안내 문자 3개</div></div><span class="tp">8쪽</span></div>
+    <div class="blk greena"><span class="tn">07</span><div class="tb"><div class="k">CX Operator로서 할 일</div><div class="tt">개선 과제와 AI</div><div class="td">손해 크기로 정한 순서와 AI와 나눌 일</div></div><span class="tp">9쪽</span></div>
+    <div class="blk black"><span class="tn">08</span><div class="tb"><div class="k">저의 기여</div><div class="tt">기여 방안</div><div class="td">실제 경험 2개, 프로젝트 2개, 3개월 계획</div></div><span class="tp">10쪽</span></div>
   </div>
   <div class="band" style="font-size:14.5pt"><b>읽는 법</b><span>숫자 옆 표시로 근거를 구분합니다</span><span class="tag c-pub" style="font-size:13pt">공개 조사</span><span class="tag c-smp" style="font-size:13pt">탐색 표본</span><span class="tag c-asm" style="font-size:13pt">가정</span><span style="font-weight:500;color:#FFFFFFB3;font-size:13pt">가정은 입사 후 확인할 부분입니다</span></div>
 </section>
@@ -175,12 +178,12 @@
     </div>
     <div class="col" style="flex:1.3;gap:3mm">
       <div class="k" style="margin:0 0 0 1mm">광고의 약속이 시험받는 순간</div>
-      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">모든 차량 무사고</span><span class="tag c-smp">리뷰 1271</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">다른 정비소에서 교환 흔적이 나올 때</div></div>
+      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">모든 차량 무사고</span><span class="tag c-smp">리뷰 1271</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">타 정비소에서 교환 흔적이 나올 때</div></div>
       <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">1년 무료 보증</span><span class="tag c-smp">리뷰 578</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">쇼바 결함이 소모품이라 거절될 때</div></div>
-      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">단순변심 무료 환불</span><span class="tag c-asm">가정</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">환불 기간이 지난 뒤 이상을 발견할 때</div></div>
+      <div class="blk white fill" style="justify-content:center;gap:2.5mm;padding:4mm 5.5mm"><div class="row" style="align-items:center;justify-content:space-between"><span class="blk green" style="padding:1.8mm 4.5mm;border-radius:10px;font-size:15pt;font-weight:800">단순변심 무료 환불</span><span class="tag c-asm">가정</span></div><div style="font-size:15pt;font-weight:700;color:var(--strong)">환불 기간 뒤 이상을 발견할 때</div></div>
     </div>
   </div>
-  <div class="src"><span class="tag c-pub">공개 조사</span> 컨슈머인사이트 제25차 연례 자동차기획조사(2025년 7월, 전체 표본 10만 명), 보도자료 2026.02.25. 플랫폼별 응답자 수는 보도자료에 없음. 약속은 heydealer.com/market/cars와 광고 youtu.be/NuFF06HlvzM</div>
+  <div class="src two"><div class="si"><span class="tag c-pub">공개 조사</span><span>컨슈머인사이트 제25차 연례 자동차기획조사(2025년 7월, 전체 표본 10만 명), 보도자료 2026.02.25. 플랫폼별 응답자 수는 보도자료에 없음. 약속은 heydealer.com/market/cars와 광고 youtu.be/NuFF06HlvzM</span></div></div>
   <div class="band"><b>질문</b><span>사는 고객의 인수 뒤 경험을, 팔 때만큼 매끄럽게 만들 수 있을까</span></div>
 </section>
 
@@ -211,7 +214,7 @@
       <div class="blk green" style="padding:4mm 6mm"><div class="row" style="align-items:center;gap:5mm"><span class="num" style="font-size:20pt;font-weight:800;white-space:nowrap">1227 | 5점</span><span style="font-size:13.5pt;font-weight:700">1년 케어로 수리비를 바로 받은 고객은 <u>5점</u>을 줬습니다</span></div></div>
     </div>
   </div>
-  <div class="src"><span class="tag c-smp">탐색 표본</span> Google Play 리뷰 6,000건(2024.03 ~ 2026.11, 작성자 이름 저장 안 함) 중 1~3점 452건을 규칙으로 분류, 무작위 40건을 직접 읽어 33건 일치. 여정 숫자는 차를 사거나 사려는 고객 글 21건입니다. 불만이 큰 사람이 더 쓰므로 비율로 읽지 않습니다.</div>
+  <div class="src two"><div class="si"><span class="tag c-smp">탐색 표본</span><span>Google Play 리뷰 6,000건(2024.03 ~ 2026.11, 작성자 이름 저장 안 함) 중 1~3점 452건을 규칙으로 분류, 무작위 40건을 직접 읽어 33건 일치. 여정 숫자는 차를 사거나 사려는 고객 글 21건입니다. 불만이 큰 사람이 더 쓰므로 비율로 읽지 않습니다.</span></div></div>
 </section>
 
 <!-- 5 3사 정책 -->
@@ -219,24 +222,24 @@
   <div class="top"><span class="pill">03 3사 정책 비교</span><span class="pno">5</span></div>
   <h1>조건은 가장 좋지만, <em>고객이 놓치기 쉬운 지점</em>이 있습니다</h1>
   <div class="row fill">
-    <div style="flex:2.1;display:grid;grid-template-columns:0.75fr 1.2fr 1fr 1fr;grid-template-rows:auto repeat(4,1fr);gap:2mm">
+    <div style="flex:2.45;display:grid;grid-template-columns:0.62fr 1.2fr 1fr 1fr;grid-template-rows:auto repeat(4,1fr);gap:2mm">
       <div></div><div style="font-size:15pt;font-weight:800;color:var(--primary);padding-left:2mm">헤이딜러</div><div style="font-size:15pt;font-weight:800;padding-left:2mm">K카</div><div style="font-size:15pt;font-weight:800;padding-left:2mm">엔카 홈서비스</div>
-      <div class="blk black" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center"><b style="font-size:15pt">단순 변심 환불</b></div>
-      <div class="blk greena" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center" >3일 무료<br><b>3일째 오후 6시 접수 마감</b></div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">3일, 100% 환불<br>오래된 차 일부 제외</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">7일<br>배송 뒤에는 탁송비, 이용료 부담</div>
-      <div class="blk black" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center"><b style="font-size:15pt">보증</b></div>
-      <div class="blk greena" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center" ><b>1년 2만km 무료</b><br>제외 항목은 앱에서 안내</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">유료 워런티 상품</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">공식 자료에서 확인 못 함</div>
-      <div class="blk black" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center"><b style="font-size:15pt">반납과 정비</b></div>
-      <div class="blk greena" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center" >탁송 중심<br>정비 연결 방식은 입사 후 확인</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">가까운 직영점에 반납</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">탁송으로 회수</div>
-      <div class="blk black" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center"><b style="font-size:15pt">상담</b></div>
-      <div class="blk greena" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center" >채팅, FAQ<br>구매예약 뒤 1영업일 해피콜</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">직영점</div>
-      <div class="blk gray" style="padding:3.5mm 5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center">엔카매니저</div>
+      <div class="blk black" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap"><b style="font-size:15pt">단순 변심 환불</b></div>
+      <div class="blk greena" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap" >3일 무료<br><b>3일째 오후 6시 마감</b></div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">3일, 100% 환불<br>오래된 차 일부 제외</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">7일<br>배송 뒤 탁송비,<br>이용료 부담</div>
+      <div class="blk black" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap"><b style="font-size:15pt">보증</b></div>
+      <div class="blk greena" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap" ><b>1년 2만km 무료</b><br>제외 항목은<br>앱에서 안내</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">유료 워런티 상품</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">공식 자료에서<br>확인 못 함</div>
+      <div class="blk black" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap"><b style="font-size:15pt">반납과 정비</b></div>
+      <div class="blk greena" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap" >탁송 중심<br>정비 연결은<br>입사 후 확인</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">가까운<br>직영점에 반납</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">탁송으로 회수</div>
+      <div class="blk black" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap"><b style="font-size:15pt">상담</b></div>
+      <div class="blk greena" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap" >채팅, FAQ<br>구매예약 뒤<br>1영업일 해피콜</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">직영점</div>
+      <div class="blk gray" style="padding:3mm 4.5mm;border-radius:12px;font-size:13.5pt;line-height:1.4;display:flex;flex-direction:column;justify-content:center;white-space:nowrap">엔카매니저</div>
     </div>
     <div class="blk black" style="flex:1;justify-content:space-between">
       <div class="k">CX Operator가 먼저 챙길 것</div>
@@ -245,7 +248,7 @@
       <div><div class="mid t-g">비교 질문</div><div style="font-size:14.5pt;font-weight:700;margin-top:1.5mm">"다른 곳은 보증이 더 길다던데요"에 무료와 유료의 차이로 답합니다</div></div>
     </div>
   </div>
-  <div class="src"><span class="tag c-pub">공개 조사</span> 헤이딜러 공식 블로그(2025.10), K카 보도자료와 기사, 엔카 이용 안내. 블로그 글마다 보증 거리가 1만km와 2만km로 달라 입사 후 약관 원문으로 확인합니다.</div>
+  <div class="src two"><div class="si"><span class="tag c-pub">공개 조사</span><span>헤이딜러 공식 블로그(2025.10), K카 보도자료, 엔카 이용 안내. 블로그 글마다 보증 거리가 1만km와 2만km로 달라 입사 후 약관으로 확인합니다.</span></div></div>
 </section>
 
 <!-- 6 케이스와 설명 -->
@@ -264,7 +267,7 @@
     </div>
     <div class="col fill" style="gap:2mm">
       <div class="blk black" style="padding:3mm 5.5mm"><div class="k">케이스 B | 리뷰 297</div><div style="font-size:17pt;font-weight:800">브레이크 수리 지연</div></div>
-      <div class="blk reda" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k t-r">문제</div><div style="font-size:13pt;font-weight:600;line-height:1.35">수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div></div>
+      <div class="blk reda" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k t-r">문제</div><div style="font-size:13pt;font-weight:600;line-height:1.35">일부만 승인, 부품 대기, 몇 주 연락 없음</div></div>
       <div class="blk gray" style="padding:2.5mm 5.5mm;flex:1;justify-content:center;gap:1mm"><div class="k">내 판단</div><div style="font-size:13pt;font-weight:600;line-height:1.35">고객은 지연보다 무엇을 기다리는지 모르는 상태가 더 힘듦</div></div>
       <div class="blk green" style="padding:2.5mm 5.5mm;flex:1.3;justify-content:center;gap:1mm"><div class="k">내 대응과 다음 개선</div><div style="font-size:13pt;font-weight:700;line-height:1.35">승인 항목과 이유를 전달하고 매주 먼저 연락. 7일 공백은 자동 알림</div></div>
     </div>
@@ -275,7 +278,7 @@
       <div style="font-size:12pt;color:var(--weak);margin-top:auto"><span class="tag c-asm">가정</span> 예시 문장입니다</div>
     </div>
   </div>
-  <div class="src">리뷰 1건씩의 공개 사례 <span class="tag c-smp">탐색 표본</span> 소모품 목록과 승인 범위의 이유는 리뷰로 알 수 없어 입사 후 확인합니다.</div>
+  <div class="src two"><div class="si"><span class="tag c-smp">탐색 표본</span><span>케이스 A, B는 리뷰 1건씩의 공개 사례입니다. 소모품 목록과 승인 범위의 이유는 리뷰로 알 수 없어 입사 후 확인합니다.</span></div></div>
   <div class="band"><b>원칙</b><span>판정은 기준과 전문가가, 설명과 다음 연락 약속은 CX Operator가</span></div>
 </section>
 
@@ -287,22 +290,22 @@
     <div class="blk black" style="flex:0 0 60mm;justify-content:space-between;padding:5mm 5.5mm">
       <div class="k">문제 정의</div>
       <div><div class="huge t-g num" style="font-size:52pt">3/4</div><div style="font-size:13.5pt;font-weight:700;margin-top:2mm;line-height:1.35">인수 뒤 보증, 수리 문제를 겪은 구매 고객 글 중 연락이 끊겼다는 글</div></div>
-      <div style="font-size:13.5pt;line-height:1.42"><b style="color:var(--primary)">가설</b><br>판단이 정비팀에 넘어가 있는 동안 고객에게 소식을 줄 사람이 정해져 있지 않다.</div>
+      <div style="font-size:13.5pt;line-height:1.42"><b style="color:var(--primary)">가설</b><br>판단이 정비팀에 넘어가 있는 동안 고객에게 소식을 줄 담당자가 없다.</div>
     </div>
     <div class="fill" style="display:grid;grid-template-columns:25mm repeat(5,1fr);grid-template-rows:auto 1.1fr 1.25fr 0.9fr 0.75fr;gap:1.8mm;font-size:12pt;line-height:1.32">
       <div></div>
       <div class="wfh">1 접수</div><div class="wfh">2 기록 확인</div><div class="wfh" style="background:var(--strong);color:#fff">3 판단 대기</div><div class="wfh">4 결과 안내</div><div class="wfh">5 종결 확인</div>
 
       <div class="wfl">고객이<br>겪은 일<small>공개 리뷰</small></div>
-      <div class="wfc">증상과 사진을 보냄</div>
+      <div class="wfc">증상과 사진 보냄</div>
       <div class="wfc">접수됐는지, 누가 맡았는지 모름</div>
       <div class="wfc red"><b>케이스 B</b>수리 일부만 승인, 부품 대기, 몇 주 연락 없음</div>
       <div class="wfc red"><b>케이스 A</b>거절 결론만 듣고 상담 요청이 끊김</div>
       <div class="wfc">답글은 달리지만 해결됐는지 아무도 묻지 않음</div>
 
       <div class="wfl" style="color:var(--primary)">CX<br>Operator<small>제안</small></div>
-      <div class="wfc on">첫 응답에 담당자 이름과 다음 연락 시각</div>
-      <div class="wfc on">점검표, 보증 기간, 제외 항목 대조</div>
+      <div class="wfc on">첫 응답에 담당자와 다음 연락 시각</div>
+      <div class="wfc on">보증 기간과 제외 항목 대조</div>
       <div class="wfc on hot2">질문을 정리해 정비팀에 넘기고, 판단 전에도 약속한 시각에 먼저 연락</div>
       <div class="wfc on hot2">결론, 근거 조항, 대안 견적, 다음 할 일을 한 번에</div>
       <div class="wfc on">7일 뒤 해결 확인, 반복이면 주간 VOC</div>
@@ -312,7 +315,7 @@
       <div class="wfc gray0"></div>
       <div class="wfc">보증 대상 판정과 수리 범위 승인</div>
       <div class="wfc">판정 근거를 CX에 공유</div>
-      <div class="wfc">반복 VOC로 보증, 점검 기준 검토</div>
+      <div class="wfc">반복 VOC로 점검 기준 검토</div>
 
       <div class="wfl">알림<small>도구</small></div>
       <div class="wfc gray0"></div>
@@ -322,7 +325,7 @@
       <div class="wfc tool">7일 재연락 목록 자동 생성</div>
     </div>
   </div>
-  <div class="src">고객이 겪은 일은 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 4건뿐이라 비율보다 끊기는 위치를 봅니다. CX와 정비팀의 흐름, 알림은 <span class="tag c-asm">가정</span> 실제 상담 도구와 팀 구성은 입사 후 확인합니다.</div>
+  <div class="src two"><div class="si"><span class="tag c-smp">탐색 표본</span><span>고객이 겪은 일은 공개 리뷰 4건이라 비율보다 연락이 끊기는 위치를 봅니다.</span></div><div class="si"><span class="tag c-asm">가정</span><span>CX와 정비팀의 흐름과 알림. 실제 상담 도구와 팀 구성은 입사 후 확인합니다.</span></div></div>
   <div class="band"><b>원칙</b><span>공이 다른 팀에 있어도, 고객에게 소식을 주는 사람은 CX Operator입니다</span></div>
 </section>
 
@@ -360,7 +363,7 @@
       <div style="font-size:12.5pt;font-weight:700;color:var(--weak);padding-left:2mm">모든 문자에 결론, 근거, 다음 연락을 넣습니다</div>
     </div>
   </div>
-  <div class="src"><span class="tag c-pub">공개 조사</span> 헤이딜러 공식 블로그의 예시(13일 인수, 15일 오후 6시 마감)대로 인수일을 1일째로 셉니다. <span class="tag c-asm">가정</span> 문자 문안과 보내는 시각. 주말과 공휴일 계산, 실제 발송 채널은 입사 후 확인합니다. 웹 포트폴리오에서 날짜를 바꿔 볼 수 있습니다.</div>
+  <div class="src two"><div class="si"><span class="tag c-pub">공개 조사</span><span>헤이딜러 공식 블로그 예시(13일 인수, 15일 오후 6시 마감)대로 인수일을 1일째로 셉니다.</span></div><div class="si"><span class="tag c-asm">가정</span><span>문자 문안과 보내는 시각. 주말, 공휴일 계산과 발송 채널은 입사 후 확인합니다.</span></div></div>
 </section>
 <script>
 (function(){
@@ -415,7 +418,7 @@
       <div class="sq black" style="width:15mm;height:15mm;font-size:22pt">4</div>
       <div style="flex:1.4;font-size:17pt;font-weight:800">부정 리뷰 뒤 재연락</div>
       <div style="flex:0.75"><span class="num" style="font-size:22pt;font-weight:800">96.7%</span><div style="font-size:12pt;font-weight:700;color:var(--weak)">답글만 달림</div></div>
-      <div style="flex:1.15"><span class="tag c-asm">CX 운영, 마케팅</span><div style="font-size:12.5pt;margin-top:1mm">구매 고객 부정 리뷰 중 7일 안에 다시 연락한 비율</div></div>
+      <div style="flex:1.15"><span class="tag c-asm">CX 운영, 마케팅</span><div style="font-size:12.5pt;margin-top:1mm">7일 안 재연락 비율</div></div>
     </div>
     </div>
     <div class="blk black" style="flex:1;justify-content:space-between;padding:5mm 6mm">
@@ -426,7 +429,7 @@
       <div style="border-top:1.5px solid #FFFFFF33;padding-top:2.5mm"><div style="font-size:15pt;font-weight:800;">주간 VOC 분류</div><div style="font-size:12.5pt;margin-top:1mm;line-height:1.4"><b>AI</b> 상담 기록에 유형과 여정 단계를 붙임<br><b>사람</b> 표본을 직접 읽어 맞는지 확인</div></div>
     </div>
   </div>
-  <div class="src">근거는 공개 리뷰 <span class="tag c-smp">탐색 표본</span> 함께할 팀, 첫 지표, AI 역할은 <span class="tag c-asm">가정</span> 1~3점 리뷰 452건 중 437건(96.7%)에 답글이 달렸습니다. 현재 상담 도구는 입사 후 확인합니다.</div>
+  <div class="src two"><div class="si"><span class="tag c-smp">탐색 표본</span><span>1~3점 리뷰 452건 중 437건(96.7%)에 답글이 달렸습니다.</span></div><div class="si"><span class="tag c-asm">가정</span><span>함께할 팀, 첫 지표, AI 역할. 현재 상담 도구는 입사 후 확인합니다.</span></div></div>
   <div class="band"><b>원칙</b><span>보증 판정, 환불 승인, 보상 금액은 AI가 정하지 않습니다</span></div>
 </section>
 
@@ -435,13 +438,13 @@
   <div class="top"><span class="pill">08 기여 방안</span><span class="pno">10</span></div>
   <h1>같은 일이 <em>다시 생기지 않게</em> 만드는 사람입니다</h1>
   <div class="fill" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm">
-    <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:34pt">400만 원</div><div><div style="font-size:16pt;font-weight:800">못 받은 수당 찾기</div><div style="font-size:13pt;margin-top:1mm">기록 대조로 9명분 발견, 두 번 거절 뒤 2주 만에 지급</div></div></div>
-    <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:30pt">40건을 10건</div><div><div style="font-size:16pt;font-weight:800">반대한 간부 6명 설득</div><div style="font-size:13pt;margin-top:1mm">ARVIS 도입 뒤 직접 만드는 반복 서류가 월 40건에서 약 10건으로 줄어듦</div></div></div>
-    <div class="blk gray" style="justify-content:space-between"><div class="k">개인 프로젝트</div><div class="big num" style="font-size:34pt">0건</div><div><div style="font-size:16pt;font-weight:800">claim-relay</div><div style="font-size:13pt;margin-top:1mm">사람이 볼 청구를 자동 처리로 넘긴 건</div></div></div>
+    <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:34pt">400만 원</div><div><div style="font-size:16pt;font-weight:800">못 받은 수당 찾기</div><div style="font-size:13pt;margin-top:1mm">기록 대조로 9명분 발견<br>두 번 거절 뒤<br>2주 만에 지급</div></div></div>
+    <div class="blk green" style="justify-content:space-between"><div class="k">실제 경험</div><div class="big num" style="font-size:30pt">40건을 10건</div><div><div style="font-size:16pt;font-weight:800">반대한 간부 6명 설득</div><div style="font-size:13pt;margin-top:1mm">ARVIS 도입 뒤 직접<br>만드는 반복 서류가<br>월 40건에서 약 10건</div></div></div>
+    <div class="blk gray" style="justify-content:space-between"><div class="k">개인 프로젝트</div><div class="big num" style="font-size:34pt">0건</div><div><div style="font-size:16pt;font-weight:800">claim-relay</div><div style="font-size:13pt;margin-top:1mm">사람이 볼 청구를<br>자동 처리로 넘긴 건</div></div></div>
     <div class="blk gray" style="justify-content:space-between"><div class="k">개인 프로젝트</div><div class="big num" style="font-size:34pt">주간 VOC</div><div><div style="font-size:16pt;font-weight:800">VoC Lens</div><div style="font-size:13pt;margin-top:1mm">리뷰 불만을 유형별로 나눠 반복 이슈를 찾는 대시보드</div></div></div>
   </div>
   <div class="chev" style="height:34mm;margin-top:5mm">
-    <div><div class="k">1개월</div><div style="font-size:14.5pt;font-weight:600">보증 기준, 점검표, 정비 용어를 익히고 지난 상담 기록으로 유형 기준을 맞춥니다</div></div>
+    <div><div class="k">1개월</div><div style="font-size:14.5pt;font-weight:600">보증 기준, 점검표, 정비 용어를<br>익히고 지난 상담 기록으로<br>유형 기준을 맞춥니다</div></div>
     <div><div class="k">2개월</div><div style="font-size:14.5pt;font-weight:600">맡은 건의 유형과 연락 공백을 기록해 주간 VOC로 정리합니다</div></div>
     <div class="on"><div class="k">3개월</div><div style="font-size:14.5pt;font-weight:600">손해가 큰 반복 이슈 하나의 기준 개선안을 상품화, 정비팀과 만듭니다</div></div>
   </div>
