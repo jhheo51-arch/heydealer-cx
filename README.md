@@ -161,4 +161,4 @@ python compare_stores.py     # 같은 기간 두 스토어 별점과 주제 비�
 
 ## 만든 사람
 
-허재혁 | tedd51@naver.com | https://github.com/jhheo51-arch
+허재혁 | https://github.com/jhheo51-arch
